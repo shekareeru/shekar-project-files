@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ***************There are four ways to create an object in java script**********************
+
+
+        //    1.  Literal_way
+        var person = {
+            fname: "Shekar",
+            Lname: "Nani",
+            City: "hyderabad",
+            Zip: 505451
+        }
+        console.log(person)
+
+        // 2. creating object with built in method
+
+        var person1 = new Object()
+        console.log(person1)
+
+        // 3 .  Creating object with constructor function
+        function Person(email, phone, address, city) {
+            this.email = email;
+            this.phone = phone;
+            this.address = address;
+            this.city = city;
+        }
+
+        var person3 = new Person("nani@gmail.com", 7661041049, "vlc", "knr")
+        var person4 = new Person("manu@gmail.com", 7661041049, "kpl", "hmnk")
+        console.log(person3);
+        console.log(person4)
+
+        // 4. creating an object with  class
+        class person5 {
+            constructor (fname,Lname){
+                this.firstName = fname;
+                this.lastName = Lname;
+            }
+        }
+        var man = new person5("shekar","nani")
+        console.log(man)
+
+
+    </script>
+</body>
+
+</html>
