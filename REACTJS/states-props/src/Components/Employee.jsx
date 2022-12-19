@@ -18,8 +18,8 @@ class Employee extends Component{
         console.log("showEmployeeInformation Called");
         // this.state.showEmployee = true
         // let newEmployee ={
-        //     empName: "Sam",
-        //     empEmail: "Sam@gmail.com",
+        //     empName: "ram",
+        //     empEmail: "ram@gmail.com",
         //     empRole: "Tester",
         // }
         let newEmployee = { ...this.state.employeeDetails, empRole: "Tester" };

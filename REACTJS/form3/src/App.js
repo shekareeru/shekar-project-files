@@ -1,12 +1,11 @@
 
 import './App.css';
-
-import Person from './Components/person';
+import Form3 from './FORM/form3';
 
 function App() {
   return (
     <div className="App">
-      <Person/>
+      <Form3/>
     </div>
   );
 }
