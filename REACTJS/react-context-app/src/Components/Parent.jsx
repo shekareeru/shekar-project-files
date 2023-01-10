@@ -6,7 +6,8 @@ const Parent = (allusers) => {
     <div>
         <h2>hello from parent componenet</h2>
         <hr />
-        <Child allusers={allusers}/>
+        <Child/>
+        {/* <Child allusers={allusers}/> */}
     </div>
   )
 }

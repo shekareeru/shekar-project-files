@@ -6,7 +6,8 @@ const Grandchild = (allusers) => {
     <div>
         <h2>hello from grandchild component</h2>
         <hr />
-        <UserDetails allusers={allusers}/>
+        <UserDetails/>
+        {/* <UserDetails allusers={allusers}/> */}
     </div>
   )
 }

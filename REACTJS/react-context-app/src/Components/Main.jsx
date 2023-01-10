@@ -1,7 +1,7 @@
 import React from 'react'
 import Parent from './Parent'
 
-const Main = () => {
+const Main = (allusers) => {
   // no props used in context app
   return (
     <div>

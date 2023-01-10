@@ -6,7 +6,8 @@ const Child = (allusers) => {
     <div>
         <h2>from child</h2>
         <hr />
-        <Grandchild allusers={allusers}/>
+        <Grandchild/>
+        {/* <Grandchild allusers={allusers}/> */}
     </div>
   )
 }
