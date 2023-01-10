@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>FNAME</th>
+                <th>LNAME</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [
+            {
+                "fname": "Hiam",
+                "lname": "Mahan"
+            },
+            {
+                "fname": "Anita",
+                "lname": "Morrow"
+            },
+            {
+                "fname": "Judy",
+                "lname": "Bartlett"
+            },
+            {
+                "fname": "Kareemah",
+                "lname": "Scioscia"
+            },
+            {
+                "fname": "Eden",
+                "lname": "Sherwood"
+            },
+            {
+                "fname": "Hanne",
+                "lname": "Voss"
+            },
+            {
+                "fname": "Jeanneth",
+                "lname": "Marashi"
+            },
+            {
+                "fname": "LuAnn",
+                "lname": "Haag"
+            },
+            {
+                "fname": "Vaidas",
+                "lname": "Laggan"
+            },
+            {
+                "fname": "Nishal",
+                "lname": "Hernandez"
+            }
+        ]
+        users.forEach((user) => {
+            var mytr = document.createElement("tr");
+
+            var mytd1 = document.createElement("td");
+            mytd1.innerHTML = user.fname;
+            mytr.append(mytd1);
+
+            var mytd2 = document.createElement("td");
+            mytd2.innerHTML = user.lname;
+            mytr.append(mytd2);
+            document.querySelector("tbody").appendChild(mytr);
+        })
+        
+    </script>
+</body>
+
+</html>
