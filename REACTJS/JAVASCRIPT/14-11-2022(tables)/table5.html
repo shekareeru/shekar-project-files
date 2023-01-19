@@ -7,27 +7,57 @@
     <title>Document</title>
 </head>
 <body>
-    <table border="1">
+    <table border="2px"> 
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>USERID</th>
-                <th>DATE</th>
-                <th>PRODUCTS</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
+        <tr>
+        <th>Id</th>
+        <th> UserId</th>
+        <th>Date</th>
+        <th>Products</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
     </table>
+    <script src="data1.js"></script>
+
     <script>
-        var data =
-    [
-        {"id":1,"userId":1,"date":"2020-03-02T00:00:02.000Z","products":[{"productId":1,"quantity":4},{"productId":2,"quantity":1},{"productId":3,"quantity":6}],"__v":0},
-        {"id":2,"userId":1,"date":"2020-01-02T00:00:02.000Z","products":[{"productId":2,"quantity":4},{"productId":1,"quantity":10},{"productId":5,"quantity":2}],"__v":0},
-        {"id":3,"userId":2,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":1,"quantity":2},{"productId":9,"quantity":1}],"__v":0},
-        {"id":4,"userId":3,"date":"2020-01-01T00:00:02.000Z","products":[{"productId":1,"quantity":4}],"__v":0},
-        {"id":5,"userId":3,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":7,"quantity":1},{"productId":8,"quantity":1}],"__v":0},
-        {"id":6,"userId":4,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":10,"quantity":2},{"productId":12,"quantity":3}],"__v":0},
-        {"id":7,"userId":8,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":18,"quantity":1}],"__v":0}]
-</script>
-    </body>
+        users.forEach((usersItem)=>{
+           // console.log(users)
+            var mytr=document.createElement("tr")
+            for( a in usersItem){
+                var  mytd=document.createElement("td")
+               if(a!=="products"&& a!=="__v"&& a!=="date"){
+                mytd.innerHTML=usersItem[a]
+                mytr.appendChild(mytd)
+               }else if(a == "products"){
+                var prodtable=document.createElement("table");
+                usersItem[a].forEach((item)=>{
+                    var  prodtr=document.createElement("tr")
+                    for(c in item){
+                        var prodtd=document.createElement("td")
+                        prodtd.innerHTML=c+" :"+item[c];
+                       prodtr.appendChild(prodtd)
+                    }
+                    prodtable.appendChild(prodtr);
+                })
+                mytd.appendChild(prodtable);
+                mytr.appendChild(mytd);
+               }
+               else if(a == "date"){
+                mytd.innerHTML= new Date(usersItem[a]).toDateString();
+                mytr.appendChild(mytd)
+
+               }
+               
+            }
+            document.querySelector("tbody").appendChild(mytr)
+        });
+       
+
+
+    </script>
+    
+</body>
 </html>

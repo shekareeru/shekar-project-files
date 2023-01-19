@@ -116,18 +116,41 @@
                 "zip": 19779
             }
         ]
-
         users.forEach((user) => {
             var mytr = document.createElement("tr");
 
-            for (a in user) {
-               
-            } var mytd = document.createElement("td");
-                mytd.innerHTML = user[a];
-                mytr.append(mytd);
+            var mytd1 = document.createElement("td");
+            mytd1.innerHTML = user.fname;
+            mytr.append(mytd1);
+
+            var mytd2 = document.createElement("td");
+            mytd2.innerHTML = user.lname;
+            mytr.append(mytd2);
+
+            var mytd3 = document.createElement("td");
+            mytd3.innerHTML = user.tel;
+            mytr.append(mytd3);
+
+            var mytd4 = document.createElement("td");
+            mytd4.innerHTML = user.address;
+            mytr.append(mytd4);
+
+            var mytd5 = document.createElement("td");
+            mytd5.innerHTML = user.city;
+            mytr.append(mytd5);
+
+            var mytd6 = document.createElement("td");
+            mytd6.innerHTML = user.state;
+            mytr.append(mytd6);
+
+            var mytd7 = document.createElement("td");
+            mytd7.innerHTML = user.zip;
+            mytr.append(mytd7);
+
+
             document.querySelector("tbody").appendChild(mytr);
         })
-
+       
     </script>
 </body>
 

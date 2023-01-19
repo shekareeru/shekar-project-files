@@ -9,5 +9,5 @@ export const mainStore=configureStore({
         users:usersReducer,
         products:productsReducer
     },
-    middleware:[thunk]
+    middleware:[thunk],
 })
