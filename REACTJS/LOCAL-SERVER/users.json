@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "fname": "bujji",
+      "lname": "Shekar",
+      "email": "eerushekar2001@gmail.com",
+      "id": 1
+    },
+    {
+      "fname": "Nni",
+      "lname": "Shekhar",
+      "email": "shekar2001@gmail.com",
+      "id": 2
+    },
+    {
+      "fname": "Naniiiii",
+      "lname": "karoooo",
+      "email": "eeru2001@gmail.com",
+      "id": 3
+    },
+    {
+      "fname": "mjkih",
+      "lname": "hiu",
+      "email": "eerushekar2001@gmail.com",
+      "id": 5
+    }
+  ]
+}
