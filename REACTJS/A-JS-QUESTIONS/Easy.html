@@ -291,7 +291,7 @@ findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
     // reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
 
     function reverseCase(str) {
-      console.log(str);
+      // console.log(str);
       var str2 = '';
 
       for (var i = 0; i < str.length; i++) {
@@ -521,7 +521,7 @@ Output: A1 B2 C3 D4 E5 F6 ……. Z26  -->
      for (i = 65 ; i <= 90 ; i++){
         count++
          
-     console.log(String.fromCharCode(i) + " " + count)
+    //  console.log(String.fromCharCode(i) + " " + count)
      }
     
 </script>
@@ -554,7 +554,7 @@ console.log(findmissing(arr,m))
 
 Input: i am ram
 Output: 3 vowels 3 consonants. -->
-<script>
+<!-- <script>
   let string = prompt("enter a string")
   let counts=0;
   for(let i=0;i<string.length;i++){
@@ -564,7 +564,7 @@ Output: 3 vowels 3 consonants. -->
       }
   }
   console.log("vowels:",counts,"consonants:",(string.length-counts))
-</script>
+</script> -->
 
 
   <!-- 31. program to insert  the elements of an array for specific index.
@@ -616,6 +616,26 @@ Output: 7 present 2 times.  -->
       
   }
 console.log(count)
+</script>
+
+<!-- this.********************************** -->
+<script>
+  var obj={
+    name:"nani",
+    getName:function(){
+      console.log(this.name)
+    }
+  }
+  var getName = obj.getName
+  var obj2 = {name:"ammi",getName}
+  obj2.getName()
+
+
+  function sayHi(msg){
+    return console.log(this.name+"is"+msg)
+  }
+  var per = {name:"nani"}
+  sayHi.apply(per,["boy"])
 </script>
 
 
