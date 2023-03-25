@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//  1 Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+// Examples :
+
+// toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+
+// toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots",12]]
+
+// toArray({}) ➞ []
+        function toArray(obj) {
+  return Object.entries(obj);
+}
+// This function uses the Object.entries method to convert the object into an array of
+//  key-value pairs. Each pair is represented as an array with two elements: the key as the
+//   first element and the value as the second element. If the object is empty, an empty array is returned.
+
+// Here are some examples of how to use the toArray function:
+console.log(toArray({ a: 1, b: 2 })); // [["a", 1], ["b", 2]]
+console.log(toArray({ shrimp: 15, tots: 12 })); // [["shrimp", 15], ["tots", 12]]
+console.log(toArray({})); // []
+// Note that the order of the key-value pairs in the resulting array is not guaranteed to be the same as the order in the original object.
+  
+
+
+// 2 Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+// Examples :
+
+// arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+
+// arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+
+// arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+function arrayOfMultiples(num, length) {
+  const result = [];
+  for (let i = 1; i <= length; i++) {
+    result.push(num * i);
+  }
+  return result;
+}
+// This function uses a loop to generate an array of multiples of num. The loop iterates
+//  length times and pushes the current multiple (which is num multiplied by the loop index)
+//  to the result array on each iteration. Finally, the function returns the resulting array.
+
+// Here are some examples of how to use the arrayOfMultiples function:
+
+
+console.log(arrayOfMultiples(7, 5)); // [7, 14, 21, 28, 35]
+console.log(arrayOfMultiples(12, 10)); // [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+console.log(arrayOfMultiples(17, 6)); // [17, 34, 51, 68, 85, 102]
+// Note that the function assumes that both arguments are positive integers. If either argument is invalid, the function behavior is undefined.
+
+
+
+// 3 Create the function that takes an array with objects and returns the sum of people's budgets.
+
+// Examples :
+
+// getBudgets([
+//   { name: "John", age: 21, budget: 23000 },
+//   { name: "Steve",  age: 32, budget: 40000 },
+//   { name: "Martin",  age: 16, budget: 2700 }
+// ]) ➞ 65700
+
+// getBudgets([
+//   { name: "John",  age: 21, budget: 29000 },
+//   { name: "Steve",  age: 32, budget: 32000 },
+//   { name: "Martin",  age: 16, budget: 1600 }
+// ]) ➞ 62600
+function getBudgets(arr) {
+  let totalBudget = 0;
+  for (let i = 0; i < arr.length; i++) {
+    totalBudget += arr[i].budget;
+  }
+  return totalBudget;
+}
+// This function uses a loop to iterate over the array of objects and accumulate the budget values of each object into a variable called totalBudget. Finally, the function returns the total budget.
+
+// Here are some examples of how to use the getBudgets function:
+const people1 = [
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+];
+console.log(getBudgets(people1)); // 65700
+
+const people2 = [
+  { name: "John",  age: 21, budget: 29000 },
+  { name: "Steve",  age: 32, budget: 32000 },
+  { name: "Martin",  age: 16, budget: 1600 }
+];
+console.log(getBudgets(people2)); // 62600
+// Note that the function assumes that the input array is valid (i.e., it contains only objects with a budget property). If the input is invalid or empty, the function behavior is undefined.
+
+
+// 4  Create a function that takes an array of objects like { name: "John", notes: [3, 5, 4]} and returns an array of objects like { name: "John", avgNote: 4 }. If a student has no notes (an empty array) then let's assume avgNote: 0.
+// 	Example :
+
+// [
+//   { name: "John", notes: [3, 5, 4]}
+// ] ➞ [
+//   { name: "John", avgNote: 4 }
+// ]
+function calculateAvgNotes(students) {
+  const result = [];
+  for (let i = 0; i < students.length; i++) {
+    const student = students[i];
+    const avgNote = student.notes.length > 0
+      ? student.notes.reduce((sum, note) => sum + note, 0) / student.notes.length
+      : 0;
+    result.push({ name: student.name, avgNote: avgNote });
+  }
+  return result;
+}
+// This function takes an array of objects with name and notes properties and calculates the average note for each student. The function uses a loop to iterate over the input array and calculate the average note for each student. The average note is computed using a ternary operator: if the student has notes, then the average is computed by dividing the sum of the notes by the number of notes; otherwise, the average is set to 0. Finally, the function pushes an object with the student's name and average note to a new array called result and returns it.
+const students = [
+  { name: "John", notes: [3, 5, 4]},
+  { name: "Alice", notes: [5, 4]},
+  { name: "Bob", notes: []}
+];
+console.log(calculateAvgNotes(students));
+// Output: [
+//   { name: "John", avgNote: 4 },
+//   { name: "Alice", avgNote: 4.5 },
+//   { name: "Bob", avgNote: 0 }
+// ]
+
+// 5  Create a function that moves all capital letters to the front of a word.
+// 	Examples :
+
+// capToFront("hApPy") ➞ "APhpy"
+
+// capToFront("moveMENT") ➞ "MENTmove"
+
+// capToFront("shOrtCAKE") ➞ "OCAKEshrt"
+function capToFront(word) {
+  let caps = "";
+  let nonCaps = "";
+  for (let i = 0; i < word.length; i++) {
+    if (word[i].toUpperCase() === word[i]) {
+      caps += word[i];
+    } else {
+      nonCaps += word[i];
+    }
+  }
+  return caps + nonCaps;
+}
+// In this function, we create two empty strings, caps and nonCaps, to hold the capital letters and non-capital letters, respectively. We then loop through each character in the word string and check if it's a capital letter using the toUpperCase() method. If it is, we add it to the caps string. If it's not, we add it to the nonCaps string.
+
+// Finally, we return the caps string followed by the nonCaps string, which gives us the desired result of moving all capital letters to the front of the word.
+
+
+//6 Count each occurrence of number(can not use predefined function).
+
+// Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+// Output: 1 present 2 times.
+//      2 present 1 times.
+//      3 present 2 times.
+//      5 present 1 times …….  Etc
+// function countOccurrences(arr, num) {
+//   const counts = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === num) {
+//       if (num in counts) {
+//         counts[num]++;
+//       } else {
+//         counts[num] = 1;
+//       }
+//     }
+//   }
+//   const output = [];
+//   for (const [key, value] of Object.entries(counts)) {
+//     output.push(`${key} present ${value} times.`);
+//   }
+//   return output;
+// }
+// const input = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+// const numToFind = 7;
+
+// const counts = countNumbers(input);
+
+// if (numToFind in counts) {
+//   console.log(`${numToFind} present ${counts[numToFind]} times.`);
+// } else {
+//   console.log(`${numToFind} not present in the array.`);
+// }
+
+// Output: 7 present 2 times.
+
+// 7 Write a function that accepts an array of strings. Return the longest string(can not use predefined function).
+
+// 		Input: [‘nik’, ’mikhil’, ’Cow’,’Elephant’] 							Output: Elephant
+function findLongestString(arr) {
+  let longest = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longest.length) {
+      longest = arr[i];
+    }
+  }
+  return longest;
+}
+// In this function, we initialize an empty string called longest to hold the longest string 
+// in the array. We then loop through each element in the arr array and compare its length to
+//  the length of the longest string. If the current element is longer than longest, we update longest to be the current element.
+
+
+const arr = ["nik", "mikhil", "Cow", "Elephant"];
+console.log(findLongestString(arr));
+
+// 8 Most Commonly Used two Character in String(can not use predefined function)
+
+// Input: ‘Hii i am ram’
+// Output; i, a
+
+function findMostCommonTwoCharacters(str) {
+  const counts = {};
+  for (let i = 0; i < str.length - 1; i++) {
+    const pair = str.slice(i, i + 2);
+    if (counts[pair] === undefined) {
+      counts[pair] = 1;
+    } else {
+      counts[pair]++;
+    }
+  }
+  let mostCommon = ["", ""];
+  let highestCount = 0;
+  for (const key in counts) {
+    if (counts.hasOwnProperty(key)) {
+      if (counts[key] > highestCount) {
+        mostCommon = [key, ""];
+        highestCount = counts[key];
+      } else if (counts[key] === highestCount) {
+        mostCommon[1] = key;
+      }
+    }
+  }
+  return mostCommon;
+}
+
+const str = "Hii i am ram";
+console.log(findMostCommonTwoCharacters(str));
+
+
+//9 Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function).
+
+// 			Input: [5,3,5,2,1,1,7,3,5,6]
+// 			Output: [7,6,5,32,1]
+function removeDuplicatesAndSortDescending(arr) {
+  const counts = {};
+  const uniqueArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (counts[array[i]] === undefined) {
+      counts[arr[i]] = 1;
+      uniqueArr.push(arr[i]);
+    }
+  }
+  uniqueArr.sort((a, b) => b - a);
+  return uniqueArr;
+}
+// In this function, we first create an empty array called uniqueArr to hold the unique elements in the input array. We then loop through each element in the arr array and add it to uniqueArr only if it is not already in the array.
+
+// Next, we sort uniqueArr in descending order using a simple bubble sort algorithm. We loop through each element in uniqueArr except for the last one, and compare it to each subsequent element. If the current element is less than the subsequent element, we swap them.
+const array = [5, 3, 5, 2, 1, 1, 7, 3, 5, 6];
+console.log(removeDuplicatesAndSortDescending(array));
+
+// Write a Program to Remove brackets from an algebraic expression(can not use predefined function).
+
+// 			Input: a + b-(9+c)=3
+// 			Output: a + b- 9+c=3
+function removeBrackets(algebraicExp) {
+  let result = "";
+  let bracketCount = 0;
+  for (let i = 0; i < algebraicExp.length; i++) {
+    if (algebraicExp[i] === "(") {
+      bracketCount++;
+    } else if (algebraicExp[i] === ")") {
+      bracketCount--;
+    } else if (bracketCount === 0) {
+      result += algebraicExp[i];
+    }
+  }
+  return result;
+}
+const algebraicExp = "a + b-(9+c)=3";
+console.log(removeBrackets(algebraicExp));
+
+//11 Write Program to remove duplicate elements in an array and sort it in Accending order(can not use predefined function).
+
+// 			Input: [Z, A, P, C, A, Z , K, N, C]
+// 			Output: [A, C, K,N, P, Z]
+ 
+function removeDuplicatesAndSortAscending(arr) {
+  const uniqueArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueArr.includes(arr[i])) {
+      uniqueArr.push(arr[i]);
+    }
+  }
+  for (let i = 0; i < uniqueArr.length - 1; i++) {
+    for (let j = i + 1; j < uniqueArr.length; j++) {
+      if (uniqueArr[i] > uniqueArr[j]) {
+        const temp = uniqueArr[i];
+        uniqueArr[i] = uniqueArr[j];
+        uniqueArr[j] = temp;
+      }
+    }
+  }
+  return uniqueArr;
+}
+
+const arrays = ["Z", "A", "P", "C", "A", "Z", "K", "N", "C"];
+console.log(removeDuplicatesAndSortAscending(arr));
+
+   </script>
+</body>
+</html>

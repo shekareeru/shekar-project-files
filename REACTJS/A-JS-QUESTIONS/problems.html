@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // right angled traingle*************************
+    let m=5;
+    let output ="";
+    for(i=1; i<=5; i++){
+        output ="";
+        for(j=1; j<=i; j++){
+            output +="*";
+        }
+        console.log(output)
+    }
+    //  reverse*****************************************
+    let n=5;
+    let Output ="";
+    for(i=5; i>=1; i--){
+        Output ="";
+        for(j=1; j<=i; j++){
+            Output +="*";
+        }
+        console.log(Output)
+    }
+
+
+    // left angled traingle************************
+    let a =5;
+    let op ="";
+    for(i=1; i<=5; i++){
+        for(j=1; j<=5-1; j++){
+            op ="";
+        }
+        for(k=1; k<=i; k++){
+            op +="*";
+        }
+        console.log(op)
+    }
+
+    // reverse****************************
+    let b =5;
+    let otp ="";
+    for(i=5; i>=1; i--){
+        for(j=1; j<=5-1; j++){
+            otp ="";
+        }
+        for(k=1; k<=i; k++){
+            otp +="*";
+        }
+        console.log(otp)
+    }
+
+    // pyramid*******************************
+    var i,j,k;
+    for(i=1; i<=5; i++){
+        for(j=1; j<=5-i; j++){
+            document.write("&nbsp")
+        }
+        for(k=1; k<=i; k++){
+            document.write("*")
+        }
+        document.write("<br/>")
+    }
+
+    // reverse****************************
+    var i,j,k;
+    for(i=5; i>=1; i--){
+        for(j=1; j<=5-i; j++){
+            document.write("&nbsp")
+        }
+        for(k=1; k<=i; k++){
+            document.write("*")
+        }
+        document.write("<br/>")
+    }
+    </script>
+    <script>
+        // SPACE BETWEEN ARRAYS*********************
+        let name= "shekar";
+        let res = name.split("").join(" ")
+        console.log(res)
+
+
+        let no = "nani";
+        let non= no.split("").reverse().join("");
+        console.log(non)
+
+
+        let num =[1,2,3,4]
+        let Res = num.join(" ")
+        console.log(Res)
+
+        // LARGEST NUMBER********************************
+        let n1 = 33;
+        let n2 =3;
+        let n3 =200;
+        let largest;
+        if(n1>=n2&&n1>=n3){
+            largest=n1;
+        }
+        else if(n2>=n1&&n2>=n3){
+            largest=n2;
+        }
+        else{
+            largest =n3;
+        }
+        console.log("largest num is",largest)
+
+        // FIND SECONDLARGEST NUMBER*******************
+        function secondlargestnumber(){
+            var data = [1,2,3,4];
+            data.reverse(data.sort()).forEach((num,i)=>{
+                if(i==1){
+                    console.log(num)
+                }
+            })
+        }
+        secondlargestnumber()
+         
+       
+        // VOWELS***********************************
+        const vowels=(Num)=>{
+            return Num.replace(/[^aeiou]/gmi,"").length
+        }
+        console.log(vowels("NAni"))
+
+        // PRIME NUMBERS **********************************
+         const numbers = parseInt(prompt("enter a positive numer"));
+         prime = true;
+         if(numbers===1){
+            console.log("1 is either prime number nor composite number")
+         }
+         else if(numbers>1){
+            for(i=2; i<numbers; i++){
+                if(numbers%2==0){
+                    prime=false;
+                }
+            }
+            if(prime){
+            // console.log("${numbers} is a prime number")
+            console.log(`${numbers} is a prime number`);
+            }
+            else{
+                console.log(`${numbers} is not a prime number`)
+            }
+         }
+
+        //  DUPLICATE *****************************
+        const array = [1,2,3,4,3,2]
+        const duplicates =[];
+        for(i=0; i<array.length; i++){
+            for(j=i+1; j<array.length; j++){
+                if(array[i]===array[j] && !duplicates.includes(array[i])){
+                    duplicates.push(array[i])
+                }
+            }
+        }
+        console.log(duplicates)
+    </script>
+</body>
+</html>

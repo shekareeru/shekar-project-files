@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // // left angled TRIANGLE WITH ************
+        let n = 5;
+        let output = "";
+        for (let i = 1; i <= 5; i++) {
+            let output = "";
+            for (let j = 1; j <= i; j++) {
+                output += "*";
+            }
+            console.log(output);
+        }
+
+        //    REVERSE TRAINGLE
+        let m = 5;
+        let patterns = "";
+        for (let i = 5; i >= 1; i--) {
+            let patterns = "";
+            for (let j = 1; j <= i; j++) {
+                patterns += "*";
+            }
+            console.log(patterns);
+        }
+
+        //   right angled traingle************************
+        let rows = 5;
+        let pattern = '';
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5 - i; j++) {
+                pattern += '  ';
+            }
+            for (let k = 1; k <= i; k++) {
+                pattern += '* ';
+            }
+            pattern += '\n';
+        }
+
+        console.log(pattern);
+
+
+        let Rows = 5;
+        let Pattern = '';
+
+        for (let i = Rows; i >= 1; i--) {
+            for (let j = 1; j <= Rows - i; j++) {
+                Pattern += '  ';
+            }
+            for (let k = 1; k <= i; k++) {
+                Pattern += '* ';
+            }
+            Pattern += '\n';
+        }
+
+        console.log(Pattern);
+
+
+
+        //  SQUARE
+        let a = 4;
+        let row = '';
+        for (let i = 1; i <= 4; i++) {
+            let row = '';
+            for (let j = 1; j <= 4; j++) {
+                row += '*';
+            }
+            console.log(row);
+        }
+
+    </script>
+    <script>
+        // program to check if a number is prime or not
+
+
+        const number = parseInt(prompt("Enter a positive number: "));
+        let isPrime = true;
+        if (number === 1) {
+            console.log("1 is neither prime nor composite number.");
+        }
+
+        else if (number > 1) {
+
+
+            for (i = 2; i < number; i++) {
+                if (number % 2 == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                console.log(`${number} is a prime number`);
+            } else {
+                console.log(`${number} is a not prime number`);
+            }
+        }
+
+
+        // else {
+        //     console.log("The number is not a prime number.");
+        // }
+    </script>
+    <script>
+        // function Palin(str) {
+
+        //     // get the total length of the words  
+        //     const len = string.length;
+
+        //     // Use for loop to divide the words into 2 half  
+        //     for (let i = 0; i < len / 2; i++) {
+
+        //         // validate the first and last characters are same  
+        //         if (string[i] !== string[len - 1 - i]) {
+        //             alert('It is not a palindrome');
+        //         }
+        //     }
+        //     alert('It is a palindrome');
+        // }
+
+        // // accept the string or number from the prompt  
+        // const string = prompt('Enter a string or number: ');
+
+        // const value = Palin(string);
+
+        // console.log(value);  
+    </script>
+    <script>
+        function isPalindrome(input) {
+            // Convert input to string
+            let str = String(input);
+
+            // Reverse the string
+            let reversedStr = str.split("").reverse().join("");
+
+            // Check if the reversed string is equal to the original string
+            return str === reversedStr;
+        }
+
+        // Examples
+        console.log(isPalindrome(121)); // true
+        console.log(isPalindrome("racecar")); // true
+        console.log(isPalindrome(123)); // false
+        console.log(isPalindrome("hello")); // false
+
+    </script>
+    <script>
+        function findDuplicates(arr) {
+            let duplicates = [];
+
+            // Use a for loop to iterate over each element in the array
+            for (let i = 0; i < arr.length; i++) {
+                // Use the indexOf() method to check if the element appears more than once in the array
+                if (arr.indexOf(arr[i]) !== i && !duplicates.includes(arr[i])) {
+                    duplicates.push(arr[i]);
+                }
+            }
+
+            return duplicates;
+        }
+
+        // Example usage
+        let arr = [1, 2, 3, 4, 5, 2, 3, 4, 7, 8];
+        console.log(findDuplicates(arr)); // [2, 3, 4]
+
+    </script>
+    <script>
+        //  PYRAMID*************************************
+        var i, j, k;
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= 5 - i; j++) {
+                document.write("&nbsp")
+            }
+            for (k = 1; k <= i; k++) {
+                document.write("*")
+            }
+            document.write("<br/>")
+
+        }
+
+
+
+
+        var i,j,k;
+        for (let i = 5; i >= 1; i--) {
+            
+            for (let j =0 ; j < 5-i; j++) {
+                document.write("&nbsp;");
+            }
+            for (let k = 0; k < i; k++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
