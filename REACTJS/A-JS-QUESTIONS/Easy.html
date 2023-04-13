@@ -91,9 +91,11 @@
 
     function Power(voltage, current) {
       
-      return Power = voltage * current;
+      var power = voltage * current;
+  
+    console.log(power);
     }
-    console.log(Power(8, 5));
+    Power(4,5)
   </script>
   <!-- 6.Write a function that returns the string "something" joined with a space " "  and the given argument a. -->
   <script>
@@ -120,13 +122,13 @@
   <script>
     function Strings(firststring, secondstring) {
       if (firststring.length == secondstring.length) {
-        return console.log(true)
+        console.log(true)
       }
       else {
-        return console.log(false)
+        console.log(false)
       }
     }
-    Strings("1234", "bujj")
+    Strings("12354", "bujj")
   </script>
 
   <!-- 9.	Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function. -->

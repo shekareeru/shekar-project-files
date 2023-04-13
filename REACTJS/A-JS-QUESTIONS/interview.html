@@ -83,7 +83,8 @@ function getBudgets(arr) {
   }
   return totalBudget;
 }
-// This function uses a loop to iterate over the array of objects and accumulate the budget values of each object into a variable called totalBudget. Finally, the function returns the total budget.
+// This function uses a loop to iterate over the array of objects and accumulate the budget values of each object into a variable called totalBudget. 
+// Finally, the function returns the total budget.
 
 // Here are some examples of how to use the getBudgets function:
 const people1 = [
@@ -121,7 +122,10 @@ function calculateAvgNotes(students) {
   }
   return result;
 }
-// This function takes an array of objects with name and notes properties and calculates the average note for each student. The function uses a loop to iterate over the input array and calculate the average note for each student. The average note is computed using a ternary operator: if the student has notes, then the average is computed by dividing the sum of the notes by the number of notes; otherwise, the average is set to 0. Finally, the function pushes an object with the student's name and average note to a new array called result and returns it.
+// This function takes an array of objects with name and notes properties and calculates the average note for each student. 
+// The function uses a loop to iterate over the input array and calculate the average note for each student. 
+// The average note is computed using a ternary operator: if the student has notes, then the average is computed by dividing the sum of the notes by the number of notes;
+//  otherwise, the average is set to 0. Finally, the function pushes an object with the student's name and average note to a new array called result and returns it.
 const students = [
   { name: "John", notes: [3, 5, 4]},
   { name: "Alice", notes: [5, 4]},
@@ -142,21 +146,26 @@ console.log(calculateAvgNotes(students));
 // capToFront("moveMENT") ➞ "MENTmove"
 
 // capToFront("shOrtCAKE") ➞ "OCAKEshrt"
-function capToFront(word) {
-  let caps = "";
-  let nonCaps = "";
-  for (let i = 0; i < word.length; i++) {
-    if (word[i].toUpperCase() === word[i]) {
-      caps += word[i];
+
+
+function capToFront(str) {
+  let upper = "";
+  let lower = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+      upper += str[i];
     } else {
-      nonCaps += word[i];
+      lower += str[i];
     }
   }
-  return caps + nonCaps;
+  return upper + lower;
 }
-// In this function, we create two empty strings, caps and nonCaps, to hold the capital letters and non-capital letters, respectively. We then loop through each character in the word string and check if it's a capital letter using the toUpperCase() method. If it is, we add it to the caps string. If it's not, we add it to the nonCaps string.
-
-// Finally, we return the caps string followed by the nonCaps string, which gives us the desired result of moving all capital letters to the front of the word.
+// This function initializes two empty strings, upper and lower, and then uses a for loop to iterate through the characters of the input string.
+//  During each iteration, the function checks if the current character is uppercase. If it is, the function appends the character to the upper string.
+//  If it is not, the function appends the character to the lower string. Finally, the function concatenates the upper and lower strings and returns the result.
+console.log(capToFront("hApPy")); // Output: "APhpy"
+console.log(capToFront("moveMENT")); // Output: "MENTmove"
+console.log(capToFront("shOrtCAKE")); // Output: "OCAKEshrt"
 
 
 //6 Count each occurrence of number(can not use predefined function).
@@ -166,44 +175,37 @@ function capToFront(word) {
 //      2 present 1 times.
 //      3 present 2 times.
 //      5 present 1 times …….  Etc
-// function countOccurrences(arr, num) {
-//   const counts = {};
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === num) {
-//       if (num in counts) {
-//         counts[num]++;
-//       } else {
-//         counts[num] = 1;
-//       }
-//     }
-//   }
-//   const output = [];
-//   for (const [key, value] of Object.entries(counts)) {
-//     output.push(`${key} present ${value} times.`);
-//   }
-//   return output;
-// }
-// const input = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
-// const numToFind = 7;
+let arr = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10]; // Input array
+// let no_find = 7; // Number to find
 
-// const counts = countNumbers(input);
+let count = {}; // Object to store count of each number in the array
 
-// if (numToFind in counts) {
-//   console.log(`${numToFind} present ${counts[numToFind]} times.`);
-// } else {
-//   console.log(`${numToFind} not present in the array.`);
-// }
+// Loop through each element in the array and count occurrences
+for(let i=0; i<arr.length; i++) {
+    let num = arr[i];
+    if(count[num]) { // If the number already exists in the object, increment its count
+        count[num]++;
+    }
+    else { // If the number doesn't exist in the object, add it with a count of 1
+        count[num] = 1;
+    }
+}
 
-// Output: 7 present 2 times.
+// Print the count of each number
+for(let key in count) {
+    console.log(`${key} present ${count[key]} times.`);
+}
+
+
 
 // 7 Write a function that accepts an array of strings. Return the longest string(can not use predefined function).
 
 // 		Input: [‘nik’, ’mikhil’, ’Cow’,’Elephant’] 							Output: Elephant
-function findLongestString(arr) {
+function findLongestString(arrs) {
   let longest = "";
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arrs.length; i++) {
     if (arr[i].length > longest.length) {
-      longest = arr[i];
+      longest = arrs[i];
     }
   }
   return longest;
@@ -213,48 +215,43 @@ function findLongestString(arr) {
 //  the length of the longest string. If the current element is longer than longest, we update longest to be the current element.
 
 
-const arr = ["nik", "mikhil", "Cow", "Elephant"];
-console.log(findLongestString(arr));
+const arrs = ["nik", "mikhil", "Cow", "Elephant"];
+console.log(findLongestString(arrs));
 
 // 8 Most Commonly Used two Character in String(can not use predefined function)
 
 // Input: ‘Hii i am ram’
 // Output; i, a
 
-function findMostCommonTwoCharacters(str) {
-  const counts = {};
-  for (let i = 0; i < str.length - 1; i++) {
-    const pair = str.slice(i, i + 2);
-    if (counts[pair] === undefined) {
-      counts[pair] = 1;
-    } else {
-      counts[pair]++;
+let inputs = 'Hii i am ram'; // Input string
+let charCount = {}; // Object to store character count
+
+// Loop through each character in the input string and count occurrences
+for(let i=0; i<inputs.length; i++) {
+    let char = inputs[i];
+    if(char !== ' ') { // Ignore whitespace characters
+        if(charCount[char]) { // If the character already exists in the object, increment its count
+            charCount[char]++;
+        }
+        else { // If the character doesn't exist in the object, add it with a count of 1
+            charCount[char] = 1;
+        }
     }
-  }
-  let mostCommon = ["", ""];
-  let highestCount = 0;
-  for (const key in counts) {
-    if (counts.hasOwnProperty(key)) {
-      if (counts[key] > highestCount) {
-        mostCommon = [key, ""];
-        highestCount = counts[key];
-      } else if (counts[key] === highestCount) {
-        mostCommon[1] = key;
-      }
-    }
-  }
-  return mostCommon;
 }
 
-const str = "Hii i am ram";
-console.log(findMostCommonTwoCharacters(str));
+// Sort the object by count in descending order
+let sortedCharCount = Object.entries(charCount).sort((a, b) => b[1] - a[1]);
+
+// Print the two most commonly used characters
+console.log(`' ${sortedCharCount[0][0]}' and '${sortedCharCount[1][0]}'`);
+
 
 
 //9 Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function).
 
 // 			Input: [5,3,5,2,1,1,7,3,5,6]
-// 			Output: [7,6,5,32,1]
-function removeDuplicatesAndSortDescending(arr) {
+// 			Output: [7,6,5,3,2,1]
+function RDSDO(arr) {
   const counts = {};
   const uniqueArr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -266,59 +263,127 @@ function removeDuplicatesAndSortDescending(arr) {
   uniqueArr.sort((a, b) => b - a);
   return uniqueArr;
 }
-// In this function, we first create an empty array called uniqueArr to hold the unique elements in the input array. We then loop through each element in the arr array and add it to uniqueArr only if it is not already in the array.
-
-// Next, we sort uniqueArr in descending order using a simple bubble sort algorithm. We loop through each element in uniqueArr except for the last one, and compare it to each subsequent element. If the current element is less than the subsequent element, we swap them.
+// In this function, we first create an empty array called uniqueArr to hold the unique elements in the input array.
+//  We then loop through each element in the arr array and add it to uniqueArr only if it is not already in the array.
+// Next, we sort uniqueArr in descending order using a simple bubble sort algorithm.
+//  We loop through each element in uniqueArr except for the last one, and compare it to each subsequent element.
+//  If the current element is less than the subsequent element, we swap them.
 const array = [5, 3, 5, 2, 1, 1, 7, 3, 5, 6];
-console.log(removeDuplicatesAndSortDescending(array));
+console.log(RDSDO(array));
 
-// Write a Program to Remove brackets from an algebraic expression(can not use predefined function).
+//10  Write a Program to Remove brackets from an algebraic expression(can not use predefined function).
 
 // 			Input: a + b-(9+c)=3
 // 			Output: a + b- 9+c=3
-function removeBrackets(algebraicExp) {
-  let result = "";
-  let bracketCount = 0;
-  for (let i = 0; i < algebraicExp.length; i++) {
-    if (algebraicExp[i] === "(") {
-      bracketCount++;
-    } else if (algebraicExp[i] === ")") {
-      bracketCount--;
-    } else if (bracketCount === 0) {
-      result += algebraicExp[i];
+let input = "a + b-(9+c)=3"; // Input expression
+let output = ""; // Output expression
+
+for(let i=0; i<input.length; i++) { // Loop through each character in the input string
+    if(input[i] === '(' || input[i] === ')') { // If the character is a bracket, skip it
+        continue;
     }
-  }
-  return result;
+    else { // If the character is not a bracket, add it to the output string
+        output += input[i];
+    }
 }
-const algebraicExp = "a + b-(9+c)=3";
-console.log(removeBrackets(algebraicExp));
+
+console.log(output); // Print the output expression
+
 
 //11 Write Program to remove duplicate elements in an array and sort it in Accending order(can not use predefined function).
 
 // 			Input: [Z, A, P, C, A, Z , K, N, C]
 // 			Output: [A, C, K,N, P, Z]
  
-function removeDuplicatesAndSortAscending(arr) {
-  const uniqueArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (!uniqueArr.includes(arr[i])) {
-      uniqueArr.push(arr[i]);
+let arrss = ['Z', 'A', 'P', 'C', 'A', 'Z', 'K', 'N', 'C',1,2,3,67,0,8]; // Input array
+let sortedArr = []; // Array to store sorted and unique elements
+
+// Loop through each element in the input array
+for(let i=0; i<arrss.length; i++) {
+    if(!sortedArr.includes(arrss[i])) { // If the element doesn't already exist in the sorted array, add it
+        sortedArr.push(arrss[i]);
     }
-  }
-  for (let i = 0; i < uniqueArr.length - 1; i++) {
-    for (let j = i + 1; j < uniqueArr.length; j++) {
-      if (uniqueArr[i] > uniqueArr[j]) {
-        const temp = uniqueArr[i];
-        uniqueArr[i] = uniqueArr[j];
-        uniqueArr[j] = temp;
-      }
-    }
-  }
-  return uniqueArr;
 }
 
-const arrays = ["Z", "A", "P", "C", "A", "Z", "K", "N", "C"];
-console.log(removeDuplicatesAndSortAscending(arr));
+// Sort the array in ascending order using a simple bubble sort algorithm
+for(let i=0; i<sortedArr.length-1; i++) {
+    for(let j=0; j<sortedArr.length-i-1; j++) {
+        if(sortedArr[j] > sortedArr[j+1]) {
+            let temp = sortedArr[j];
+            sortedArr[j] = sortedArr[j+1];
+            sortedArr[j+1] = temp;
+        }
+    }
+}
+
+// Print the sorted and unique array
+console.log(sortedArr);
+
+
+// 12  If subseq's  array  sequence is present in the array, returns true or else returns false.                                                    
+// Let arr = [5, 7, 3, 2, 2, 7,-1, 5, -3, 13, 4]
+// Example: 
+//            Input : Subseq1 = [7, -1, 5, -3] Output:  true
+//                    Subseq2 = [7, -1, 4, -3]       : false
+//                    Subseq3 = [ -1]                : true
+//                    Subseq4 = [13, -3, 4, 1]       : false
+
+
+let arrr = [5, 7, 3, 2, 2, 7, -1, 5, -3, 13, 4]; // Input array
+let subseq1 = [7, -1, 5, -3]; // Subsequence to find
+let subseq2 = [7, -1, 4, -3]; // Subsequence to find
+let subseq3 = [-1]; // Subsequence to find
+let subseq4 = [13, -3, 4, 1]; // Subsequence to find
+
+/**
+ * Function to check whether a given subsequence is present in a given array or not
+ * @param {Array} arr - Input array
+ * @param {Array} subseq - Subsequence to find
+ * @returns {Boolean} - Returns true if subsequence is present in array, else returns false
+ */
+function isSubsequence(arrr, subseq) {
+    let i = 0, j = 0;
+    while(i < arrr.length && j < subseq.length) {
+        if(arrr[i] === subseq[j]) { // If elements match, move to the next element in subsequence
+            j++;
+        }
+        i++; // Move to the next element in the array
+    }
+    return j === subseq.length; // If j is equal to the length of subsequence, it means all elements were found in the array
+}
+
+// Test the function with different subsequences
+console.log(isSubsequence(arrr, subseq1)); // Output: true
+console.log(isSubsequence(arrr, subseq2)); // Output: false
+console.log(isSubsequence(arrr, subseq3)); // Output: true
+console.log(isSubsequence(arrr, subseq4)); // Output: false
+
+
+//13  Find sum of the Unique numbers: 
+// Example : Let arr = [1, 2, 2, 1, 3, 5, 1];
+//  The unique numbers are 1,2, 3, 5 so the sum should be 11.
+
+
+let arrrr = [1, 2, 2, 1, 3, 5, 1]; // Input array
+
+/**
+ * Function to find the sum of unique numbers in an array
+ * @param {Array} arr - Input array
+ * @returns {Number} - Returns the sum of unique numbers in the array
+ */
+function sumOfUniqueNumbers(arrrr) {
+    let uniqueNumbers = new Set(); // Create an empty Set to store unique numbers
+    let sum = 0;
+    for(let i = 0; i < arrrr.length; i++) {
+        if(!uniqueNumbers.has(arrrr[i])) { // If the number is not already in the Set, add it to the Set and add it to the sum
+            uniqueNumbers.add(arrrr[i]);
+            sum += arrrr[i];
+        }
+    }
+    return sum;
+}
+
+console.log(sumOfUniqueNumbers(arrrr)); // Output: 11
 
    </script>
 </body>
