@@ -44,7 +44,7 @@
   </script>
 
   <script>
-    //Q.No2:write a function that takes an integer minutes and converts it to seconds.
+    // Q.No2: write a function that takes an integer minutes and converts it to seconds.
    
     function convertminutes() {
       var minutes = 6;
@@ -71,7 +71,7 @@
   </script>
 
   <script>
-    //Q.No4:Create a function that takes the age in years and returns the age in days.
+    // Q.No4:Create a function that takes the age in years and returns the age in days.
     var years = 11;
     function convertyears() {
       convert = 365 * years;
@@ -87,7 +87,7 @@
   </script>
 
   <script>
-    //Q.No:5, Create a function that takes voltage and current and returns the calculated Power.
+    // Q.No:5 Create a function that takes voltage and current and returns the calculated Power.
 
     function Power(voltage, current) {
       
@@ -98,7 +98,7 @@
     Power(4,5)
   </script>
   <!-- 6.Write a function that returns the string "something" joined with a space " "  and the given argument a. -->
-  <script>
+  <script> 
     function somethingString(a) {
       console.log("something", " ", a)
     }
@@ -374,6 +374,17 @@ Explanation:  Loop start with 1 go till 5 bcoz n=5
 1 x 2 =2, 2 x 2=4, 3 x 2=6 …..etc 
  -->
   <script>
+function multiplyByTwo(num) {
+  return num * 2;
+}
+
+function multiplyByTwoLoop(n) {
+  for (let i = 1; i <= n; i++) {
+    console.log(multiplyByTwo(i));
+  }
+}
+
+multiplyByTwoLoop(5); // Output: 2 4 6 8 10
 
   </script>
 
