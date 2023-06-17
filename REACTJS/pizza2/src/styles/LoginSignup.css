@@ -1,0 +1,97 @@
+/* LoginSignup.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.BANER123 {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+}
+
+.buttons-container {
+  display: flex;
+ 
+  /* justify-content: left; */
+  justify-content: space-around;
+  /* margin: 10px 700px 10px 100px; */
+}
+
+.login-button,
+.signup-button {
+  justify-content: space-around;
+}
+.banner {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  background-color: black;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.footer-sections {
+  display: flex;
+  /* padding: 0px 70px 0px 70px; */
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  /* margin-bottom: 20px; */
+}
+
+.footer-section {
+  justify-content: space-around;
+  font-size: large;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.footer-icons p {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-icons svg {
+  color: #ffffff;
+  font-size: 44px;
+}
