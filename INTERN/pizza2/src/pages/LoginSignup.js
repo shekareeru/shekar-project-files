@@ -12,8 +12,8 @@ import { Box } from '@mui/material';
 const LoginSignup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showFields, setShowFields] = useState(false);
-  const [isLoginMode, setIsLoginMode] = useState(true);
+  const [showFields, setShowFields] = useState('');
+  const [isLoginMode, setIsLoginMode] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -94,12 +94,12 @@ const LoginSignup = () => {
         <li>About us</li>
         <li>Team</li>
         <li>Careers</li>
-        <li>Swiggy Blog</li>
+        <li>Pizza Blog</li>
         <li>Bug Bounty</li>
-        <li>Swiggy One</li>
-        <li>Swiggy Corporate</li>
-        <li>Swiggy Instamart</li>
-        <li>Swiggy Genie</li>
+        <li>Pizza One</li>
+        <li>Pizza Corporate</li>
+        <li>Pizza Instamart</li>
+        <li>Pizza Genie</li>
       </ul>
     </div>
     <div className="footer-section">

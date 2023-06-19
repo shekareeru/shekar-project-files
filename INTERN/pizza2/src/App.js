@@ -5,8 +5,6 @@ import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import About from "./pages/About";
-// import Login from "./pages/Login";
-// import Signup from "./pages/Signup";
 import LoginSignup from "./pages/LoginSignup";
 
 function App() {
