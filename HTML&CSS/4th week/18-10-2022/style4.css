@@ -1,0 +1,93 @@
+.container{
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid black;
+    height: 820px;
+    width: 90%;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-transform: uppercase;
+    text-shadow: 1px 1px;
+}
+
+
+#main_nav{
+    padding: 10px;
+    margin: 10px;
+    border: 1px 0;
+    border-color:slateblue;
+    border-style: solid;
+    background-image: linear-gradient(45deg,red,blue,green);
+    border-radius: 20px 0px 20px 0px;
+
+}
+#main_nav a{
+    text-decoration: none;
+    padding: 0 130px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+    color:aliceblue;
+}
+.heading-1 img{
+    float: right;
+    height:280px;
+    width:440px;
+    padding: 0px;
+    margin: 10px;
+    border: 6px solid darkorchid;
+}
+.heading-1 p{
+    color:rgb(20, 63, 67);
+    text-align: justify;
+    direction: ltr;
+    vertical-align:middle;
+    text-transform:initial;
+    letter-spacing: 0.5px;
+    list-style:circle;
+    line-height: 1.5;
+    white-space: pre-line;
+    font-size:large;
+    position: relative;
+}
+.heading-1 span:hover{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color: deeppink;
+}
+.heading-2 img{
+    float: left;
+    height:280px;
+    width:440px;
+    padding: 0px;
+    margin: 10px;
+    border: 6px solid darkorchid;
+}
+.heading-2 p{
+    color:rgb(20, 63, 67);
+    text-align: justify;
+    direction: ltr;
+    vertical-align:middle;
+    text-transform:initial;
+    letter-spacing: 0.5px;
+    list-style:circle;
+    line-height: 1.5;
+    white-space: pre-line;
+    font-size: large;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height:300px;
+    width: 830px;
+    position: relative;
+    top:px;
+}
+.heading-2 span{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color:red;
+}
+   

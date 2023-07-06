@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>pizza order form</title>
+       <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <img src="images.jpg" width="200" height="140"
+        alt="img" title="pizza"
+        style="float:left; margin-right: 10px; margin-bottom: 5px;
+        border:solid black 1px;padding:0px"/>
+        <img src="images.jpg" width="200" height="140"
+        alt="img" title="pizza"
+        style="float:right; margin-right: 10px; margin-bottom: 5px;
+        border:solid black 1px;padding:0px"/>
+        <h1>
+           Pizza Hut
+        </h1>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <h2>
+            PIZZA ORDER
+        </h2>
+        <form action="order-placed.html">
+            <label for="customername">
+                Customer Name:  
+                 <input type="text" name="firstname" id="customername"placeholder="Enter your Name"/>
+            </label for="number">
+            <br>
+            <br>
+            <label>
+                TelephoneNumber:
+                <input type="tel" id="number" placeholder="Enter your mobile Number" maxlength="10"/> 
+            </label>
+            <br>
+            <br>
+            <label for="email">
+                Email-address:
+                <input type="email"name="email"id="email"placeholder="Enter your E-mail"/></label>
+            <fieldset>
+                <legend>
+                    Pizza Size
+                </legend>
+                <input type="radio"id="selection"/>
+            <label for="selection">
+                Small
+            </label>
+            <br>
+                <input type="radio"id="selection"/>
+            <label for="selection">
+                Medium
+            </label>
+            <br>
+                <input type="radio"id="selection"/>
+            <label for="selection">
+                Large
+            </label>
+            <br>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Pizza Topingus
+                </legend>
+                <div>
+                <input type="checkbox"id="selection"/>
+                <label for="selection">
+                    Pepperoni
+                </label>
+                <br>
+                <input type="checkbox"id="selection"/>
+                <label for="selection">
+                    Mushroom
+                </label>
+                <br>
+                <input type="checkbox"id="selection"/>
+                <label for="selection">
+                    Extra cheese
+                </label>
+                <br>
+                <input type="checkbox"id="selecticon"/>
+                <label for="selection">
+                    Sausage
+                </label>
+                <br>
+                </div>
+                <input type="radio"id="selection"/>
+            <label for="selection">
+                Small
+            </label>
+                <input type="radio"id="selection"/>
+            <label for="selection">
+                Medium
+            </label>
+                <input type="radio"id="selection"/>
+            <label for="selection">
+                Large
+            </label>
+            </fieldset>
+            <br>
+            <br>
+            <label>
+                Feedback:
+                 <br>
+                <textarea name="feedback" id="feedback" placeholder="Give your feedback" cols="150" rows="8">
+Give your feedback
+        </textarea>
+                <br>
+                <br>
+                </label>
+            <label>
+                Preferred Delivery Time
+                <input type="time"value="03:33 33"/>
+            </label>
+            <br>
+            <br>
+            <button type="submit">
+                submit order
+            </button>
+            <label>
+                <input type="reset"/>
+            </label>
+        </form>
+    </body>
+</html>
+ 

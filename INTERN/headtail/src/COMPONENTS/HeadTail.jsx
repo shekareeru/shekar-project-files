@@ -43,14 +43,12 @@ function HeadTail() {
     prevSelecteOption.current = selectedOption;
   };
 
-  const handleClickDelete = (col, index, item) => {
-    let arr = data.data[col].splice(index, 1);
-    let temp = {
-      ...data,
-      data: data.data,
-    };
-    setData(temp);
+  const handleClickDelete = (col, index) => {
+    let newData = [...data.data];
+    newData[col].splice(index, 1);
+    setData({ data: newData });
   };
+  
 
   return (
     <div className="container">

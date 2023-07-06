@@ -1,0 +1,91 @@
+body{
+    margin: 10px 250px 0px 250px;
+    border: 20px solid black;
+    background-color:azure;
+    border-radius: 40px;
+}
+nav{
+    align-items: center;
+    height: 50px;
+    background-color:lightskyblue;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+nav a{
+    display: inline-block;
+    height: 20px;
+    color:crimson;
+    font-weight: bolder;
+    text-decoration: none;
+}
+span{
+    color:blue;
+}
+#main{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color:aliceblue;
+    
+}
+img{
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+.about{
+    padding: 40px 0px 0px 300px;
+    font-size: larger;
+    
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style:solid;
+    color: red;
+}
+
+table,th,td{
+    font-size: large;
+    font-weight: bold;
+    padding: 0px 52px 0px 65px;
+    border:2px solid black;
+    border-collapse: collapse;
+    background-color:aliceblue;
+
+}
+#skills{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: aliceblue;
+    color: rgb(8, 8, 61);
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+li{
+    padding-left: 200px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+#project{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color:aliceblue;
+}
+.contact{
+    background-color: aliceblue;
+    text-align: center;
+}
+.footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}

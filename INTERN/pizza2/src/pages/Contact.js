@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <Layout>
       <Box sx={{ my: 5, ml: 10, "& h4": { fontWeight: "bold", mb: 2 } }}>
-        {/* <Typography variant="h4">Contact My Resturant</Typography> */}
+
         <h2>Contact My Pizza Hut</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem odio

@@ -1,0 +1,46 @@
+.navbar{
+    background-color:lightcyan;
+}
+nav ul{
+    display: flex;
+    margin-right: none;
+}
+nav ul li{
+    list-style: none;
+
+}
+nav ul li a{
+    padding: 30px;
+    color: blueviolet;
+    font-size: medium;
+    justify-content: space-around;
+}
+.carousel-inner{
+    width: 100%;
+    height: 700px;
+                    
+}
+h1{
+    padding: 20px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+.searchIcons{
+    position: relative;
+    left: 3%;
+}
+.box{
+    margin-top: 20px;
+    background-color: black;
+}
+.box ul{
+    text-decoration: none;
+    list-style: none;
+}
+.box ul a{
+    color: aliceblue;
+}
+input[type="text"]{
+    border-radius: 20px;
+    width: 300px;
+}

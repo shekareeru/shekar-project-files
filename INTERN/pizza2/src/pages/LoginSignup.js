@@ -45,12 +45,14 @@ const LoginSignup = () => {
 
     if (isLoginMode) {
       // Perform login logic
-      navigate('/home');
+      navigate(`/home`);
     } else {
       // Perform signup logic
-      navigate('/home');
+      navigate(`/home`);
     }
   };
+
+
 
   return (
     <div className="container">
@@ -77,15 +79,15 @@ const LoginSignup = () => {
               Password:
               <input type="password" value={password} onChange={handlePasswordChange} className="input-field" />
             </label>
+           
             <button type="submit" className="action-button">{isLoginMode ? 'Login' : 'Signup'}</button>
             {error && <p className="error-message">{error}</p>}
           </form>
         )}
       </div>
       <div className="banner" style={{ backgroundImage: `url(${Baanner})` }}>
-        {/* <h2>Special Offer: 50% off on all pizzas today!</h2> */}
+
       </div>
-      
       <footer className="footer">
   <div className="footer-sections">
     <div className="footer-section">

@@ -1,0 +1,119 @@
+/*body{
+    background-color: aquamarine;
+}
+@media screen and (max-width: 500px){
+    .container{
+        background-color: yellowgreen;
+    }   
+}
+*/
+.navbar{
+    width: 100%;
+    color: #fff;
+    background-color: #479d96;
+    height: 70px;
+    margin-bottom: 50px;
+    border: 5px solid red;
+}
+.navbar .container{
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+nav{
+    display: flex;
+}
+nav ul{
+    display: flex;
+    margin-right: none;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: medium;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+.navbar .button{
+    background-color: #fff;
+    color:pink;
+    padding: 6px 12px;
+    margin-left:100px;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+
+.heading-1{
+    margin-left: 450px;
+    border: 2px solid blue;
+    padding: 10px;
+    margin-bottom: 60px;
+    display: block;
+    width: 40%;
+   
+    text-align: center;
+    background-image: linear-gradient(45deg,yellow,deeppink,blueviolet,yellowgreen,green,blue,red);
+}
+.heading-1 a{
+    padding: 0px 130px;
+    margin: 10px;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.heading-2{
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    background-image: radial-gradient(red,blue,green);
+  
+}
+.heading-2 a{
+    padding: 0px 130px;
+    margin: 10px;
+    display: flex;
+    text-transform: uppercase;
+    color: azure;
+    flex-flow:wrap-reverse;
+}
+
+.heading-4{
+    border: 2px solid blue;
+    display: flex;
+    padding: 0px 80px;
+    margin: 10px;
+    text-transform: uppercase;
+    flex-direction: row-reverse;
+    flex-grow:none;
+}
+.heading-4 a{
+    padding: 0px 130px;
+    display: flex;
+    margin: 10px;
+    text-transform: uppercase;
+    gap: 10px 10px;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-grow: inherit;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    
+}
+
+
+

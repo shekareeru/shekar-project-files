@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding:10px;
+    background-image: radial-gradient(45deg,red,blue,white,orange,green,black,purple);
+}
+table,td,th{
+    border:2px solid black;
+    border-collapse: collapse;
+}
+tr:nth-child(even){
+    color: red;
+    background-color: aquamarine;
+}
+tr:nth-child(odd){
+    color: blueviolet;
+    background-color: pink;
+}
+img{
+    height: 300px;
+    width: 600px;
+}
+th:hover{
+    color: yellow;
+    background-color: lightpink;
+}

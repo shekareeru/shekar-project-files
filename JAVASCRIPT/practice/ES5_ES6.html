@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+
+    // *******************************************ES5**************************************************
+        // isArray*     checks if the passed value is an array*************************************
+
+        var data = [1,2,3,4]
+        console.log(Array.isArray(data))
+
+        // map******  creates a new array from calling a function for every array elelment
+        //  ********************************
+        var data = [1,2,3,4]
+        data.map(
+            function(element){
+                console.log(element)
+            }
+        )
+
+        // map return******************************
+        var data = [1,2,3,4]
+        var value = data.map(
+            function(element){
+                return element+2
+            }
+        )
+        console.log(value)
+
+
+        // filter**********************************
+        var data = [1,2,3,4]
+        var value = data.filter(
+            function(element){
+                return element>2
+            }
+        )
+        console.log(value)
+
+        // forEach******************************************
+        var data = [1,2,3,4]
+        data.forEach(
+            function(element){
+                console.log(element)
+            }
+        )
+
+        var data = {
+            name : 'shekar',
+            age : 22,
+        }
+
+
+        // stringify**************************************
+        var JSON =JSON.stringify(data)
+        console.log(JSON)
+
+        // date
+        var date =new Date()
+        console.log(date.valueOf())
+
+
+
+
+        // ******************************************ES6*****************************************
+        const user = (num1)=>{
+            return num1+3
+        }
+        var value = user(10)
+        document.write(value)
+
+
+
+
+        class User{
+            constructor(msg){
+                this.msg = msg;
+            }
+            admin(){
+                console.log(this.msg);
+            }
+            
+        }
+        let obj = new User('hi');
+        obj.admin();
+
+        var person = [1,2,3]
+        console.log(person.includes(6))
+
+
+        console.log(2**10)
+
+        var data = 'hello'
+        console.log(data.padEnd(6,'*'))
+
+
+//         // HOIST***************************************************************
+//         hoistedVariable = 3;
+//         console.log(hoistedVariable)
+//         var hoistedVariable;
+
+//         hoistedFunc()
+//         function hoistedFunc(){
+//         console.log("hi")
+//         }
+
+//         // var x=2;
+//         // var y=2;
+//         // console.log(x==y)
+//         // console.log(x===y)
+        
+//  const x="hi"
+//  const y="bye"
+//  const result = parselnt(x)+parselnt(y)
+//  console.log(results,typeof result)
+
+
+
+    </script>
+</body>
+</html>

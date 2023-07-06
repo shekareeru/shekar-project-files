@@ -13,20 +13,19 @@ const About = () => {
           "& h4": {
             fontWeight: "bold",
             my: 2,
-            fontSize: "2rem",
+            
           },
           "& p": {
             textAlign: "justify",
           },
           "@media (max-width:600px)": {
             mt: 0,
-            "& h4 ": {
-              fontSize: "1.5rem",
-            },
+            
           },
         }}
       >
         <Typography variant="h4">Welcome To Pizza Hut</Typography>
+        
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod,
           suscipit, aperiam totam autem culpa cum eveniet dolorum quasi est

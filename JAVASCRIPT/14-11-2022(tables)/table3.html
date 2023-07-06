@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [
+            {
+                "id": 41,
+                "email": "VMcnamee@dolor.gov",
+                "username": "HDay",
+                "password": "Wca1n"
+            },
+            {
+                "id": 42,
+                "email": "RMosher@massa.io",
+                "username": "CMarina",
+                "password": "BNzuO"
+            },
+            {
+                "id": 43,
+                "email": "MKlapper@dui.ly",
+                "username": "OStutzman",
+                "password": "bJ0vR"
+            },
+            {
+                "id": 44,
+                "email": "AEfird@vestibulum.ly",
+                "username": "KPatel",
+                "password": "myCti"
+            },
+            {
+                "id": 45,
+                "email": "KCasey@tortor.net",
+                "username": "TWall",
+                "password": "zSpt7"
+            },
+            {
+                "id": 46,
+                "email": "SSwetland@etiam.ly",
+                "username": "TDavidson",
+                "password": "PlVqy"
+            },
+            {
+                "id": 47,
+                "email": "BDunn@curabitur.org",
+                "username": "MWoodhouse",
+                "password": "gkga4"
+            },
+            {
+                "id": 48,
+                "email": "CNoriega@turpis.org",
+                "username": "DMartin",
+                "password": "mlyi7"
+            },
+            {
+                "id": 49,
+                "email": "DHughesdkaiya@orci.org",
+                "username": "TDykstra",
+                "password": "exNA6"
+            },
+            {
+                "id": 50,
+                "email": "OStaley@suspendisse.org",
+                "username": "TStokes",
+                "password": "F0eFM"
+            }
+        ]
+        users.forEach((user) => {
+            var mytr = document.createElement("tr");
+
+            Object.values(user).forEach((val) => {
+                console.log(val)
+                var mytd = document.createElement("td");
+                mytd.innerHTML = val;
+                mytr.append(mytd);
+
+            })
+
+            document.querySelector("tbody").appendChild(mytr);
+        })
+    </script>
+</body>
+
+</html>

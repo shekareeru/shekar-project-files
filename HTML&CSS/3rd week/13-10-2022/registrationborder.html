@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title> 
+    <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+      }
+        table,th,td
+        {
+            border:1px solid black;
+            border-style: dotted;
+            border-color: darkblue;
+            background-color: azure;
+            color:brown;
+            margin:0 20 20 30;
+            border-radius: 10px 5px;
+        }
+        h1{
+          text-transform: uppercase;
+          border-style: dashed;
+          padding: 10px;
+          background-color: lightgreen;
+          margin: 50px;
+          color:red;
+          text-align: center;
+          border-radius: 50%;
+        }
+        input[type="text"]{
+          border-style:solid;
+          border-color: darkmagenta;
+          border-width: 5px;
+          padding:5px;
+          background-color: greenyellow;
+          margin: 10px;
+          outline-style: dashed;
+          outline-width: 2px;
+          outline-color: blue;
+          color:red;
+          text-align: center;
+        }
+        textarea{
+          border-style: double;
+          background-color: bisque;
+          border-width:2px 10px 5px 15px;
+          border-color: gray;
+          margin: 20px;
+          border-radius: 2px 4px;
+          
+        }
+    </style>
+     </head>
+      <body>
+        <h1>gurunanak institute of techonoly
+        <br>
+        <p>registration form</p>
+        </h1>
+        <lable>
+         Name of Department
+         <select>
+            <option>CIVIL ENGINEERING</option>
+            <option>MECHANICAL</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>EEE</option>
+         </select>
+        </lable>
+        <br>
+        <br>
+       <lable>
+        Applicant's Name:
+        <input type="text"  placeholder="Name" maxlength="20"/>
+       </lable>
+       <lable>
+        Applicant's Father Name:
+        <input type="text" placeholder="Father Name" maxlength="20"/>
+       </lable>
+       <lable>
+        Applicant's Mother Name:
+        <input type="text" placeholder="Mother Name" maxlength="20"/>
+       </lable>
+       <br>
+       <br>
+       <label>
+        Address:
+         <br>
+        <textarea name="Address" id="address" cols="100" rows="20">
+Enter your Detail Address
+</textarea>
+        <br>
+        <br>
+        </label>
+        <lable>
+        Mobile Number:
+        <input type="number" placeholder="Mobile Number" maxlength="10"/>
+        </lable>
+        <br>
+        <br>
+        <lable>
+           Email:
+            <input type="text" placeholder="Email" />
+        </lable>
+        <lable>
+            Nationality:
+            <select>
+                <option>india</option>
+                <option>australian</option>
+            </select>
+        </lable>
+        <br>
+        <br>
+        <lable>
+            Date of Birth:
+            <input type="date" placeholder="date"/>
+        </lable>
+        <label>
+           sex: 
+          <input type="radio" id="male" value="male"/>
+          male
+          </label>
+         <lable>
+        <input type="radio" id="female" value="female"/>
+        female
+        </lable>
+        <lable>
+        <input type="radio" id="others" value="others"/>
+        others
+        <br>
+        </label>
+            <h2 style="color:black; background-color: white; font-size: medium;">Acadamic Details</h2>
+        <table>
+           <caption style="color:black; background-color: aliceblue; font-size:medium;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"></caption>
+         <tr>
+           <th>S.NO</th>
+           <th>Board/University</th>
+           <th>School Name/College Name</th>
+           <th>Year of Passing</th>
+           <th>%</th>
+         </tr>
+         <tr>
+           <td>01</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+         </tr>
+         <tr>
+           <td>02</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+         </tr>
+         <tr>
+           <td>03</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+         </tr> 
+        </table>
+        <lable>Upload marksheet image:
+         <br>
+         <input type="file" name="profile" id="profile">
+        </lable>
+        <label>
+         <input type="file" name="profile" id="profile">
+        </label>
+        <label>
+         <input type="file" name="profile" id="profile">
+        </label>
+        <br>
+        <br>
+        <lable>
+         Date:
+         <input  type="date" placeholder="date"/>
+        </lable>
+        <br>
+        <br>
+        <lable>
+         Signature
+         <input type="text" placeholder="sign">
+      </lable>
+      <lable>
+        <br>
+        <br>
+        <button>submit</button>
+      </lable>
+      </body>
+</html>
