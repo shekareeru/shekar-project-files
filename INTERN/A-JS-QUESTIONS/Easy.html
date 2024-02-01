@@ -39,8 +39,23 @@
 
     }
     addition(5, 10)
-        // var result= addition(9,8);
-        // console.log(result);
+           
+
+
+    function addNumbers() {
+  var numbers = [3,3,3];
+  var sum = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+}
+var result = addNumbers();
+console.log(result);
+
+
+
+
   </script>
 
   <script>
@@ -214,9 +229,8 @@ findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
 <script>
 
 let Str="shekar";
-    let Arr = Str.split("")
-    let Result = Arr.join(" ")
-    console.log(Result) 
+    let Arr = Str.split("").join(" ")
+    console.log(Arr) 
 
   let myArray = [1,2,3,4]
   let mystring = myArray.join(" ")
@@ -338,8 +352,8 @@ findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
 }
 
 // Example usage
-console.log(countVowels('hEllOOo world')); // Output: 3
-console.log(countVowels('JavaScript is awesome'));
+console.log(countVowels('hEllOOo worlUd')); // Output: 3
+console.log(countVowels('JavaScrIIpt is awesme'));
   </script>
 
 
@@ -349,21 +363,18 @@ console.log(countVowels('JavaScript is awesome'));
     // reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
 
     function reverseCase(str) {
-      // console.log(str);
       var str2 = '';
-
       for (var i = 0; i < str.length; i++) {
         if (str.charAt(i) === str.charAt(i).toLowerCase()) {
           str2 += str.charAt(i).toUpperCase();
-        } else if (str.charAt(i) === str.charAt(i).toUpperCase()) {
-          str2 += str.charAt(i).toLowerCase()
         } else {
-          str2 += str.charAt(i);
-        }
+          str.charAt(i) === str.charAt(i).toUpperCase() 
+          str2 += str.charAt(i).toLowerCase()
+        } 
       }
       console.log(str2);
     }
-    reverseCase("haPPy BirtDaY ShekaR")
+    reverseCase("haPPyy AAAppph")
   </script>
   <!-- 19. Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer.
 			
@@ -400,23 +411,17 @@ Output:    String -->
       return data
     }
     console.log(params(typeof (500)))
-
-
-    params2 = (data2) => {
-
-      return data2
-    }
-    console.log(params2(typeof ("coding")))
+    console.log(params(typeof (true)))
   </script>
 
 
   <script>
     //Q.No:21.Program to find greatest of three numbers(using ternery operator)
-    let num1 = 5;
-    let num2 = 4;
-    let num3 = 3;
+    let num1 = 500;
+    let num2 = 4004;
+    let num3 = 300;
     let largest;
-    if (num1 >= num2 && num2 >= num3) {
+    if (num1 >= num2 && num1 >= num3) {
       largest = num1;
     }
     else if (num2 >= num1 && num2 >= num3) {
@@ -473,21 +478,21 @@ Output:    String -->
     // 1 2 3 4
     // 1 2 3 4 5
 
-    var i, j;
-    for (i = 0; i <= 5; i++) {
-      for (j = 1; j <= i; j++) {
-        document.write(j + "&nbsp;&nbsp;");
-        // non breaking space
-        // console.log(j)
-      }
-      document.write("<br>");
-      // console.log("<br>")
-    }
+    // var i, j;
+    // for (i = 0; i <= 5; i++) {
+    //   for (j = 1; j <= i; j++) {
+    //     document.write(j + "&nbsp;&nbsp;");
+    //     // non breaking space
+    //     // console.log(j)
+    //   }
+    //   document.write("<br>");
+    //   // console.log("<br>")
+    // }
   </script>
 
 
   <script>
-    const [, , , Cars] = ['BMW', 'AUDI', 'MERCEDES', 'POLO'];
+    const [,,, Cars] = ['BMW', 'AUDI', 'MERCEDES', 'POLO'];
     console.log(Cars);
   //output:POLO
   </script>
@@ -520,7 +525,7 @@ Output:    String -->
     // math=Introduction to JavaScript Math Functions. The JavaScript Math is a built-in object that provides properties and methods for mathematical constants and functions to execute mathematical operations.
     // math.pow=get power of a number                      Math.pow () function returns a number raised to a certain power. It returns the base to the exponent power, i.e. baseexponent
 
-    console.log("Result:: " + base + "^" + exponent + " = " + result)
+    console.log(result)
   </script>
 
   <!-- 26.Program to Check Whether a Number is Prime or Not
@@ -531,36 +536,34 @@ Output: 9 is not a prime no
 Input: 7
 Output : 7 is a prime no -->
   <script>
-    // const num1 = parseInt(prompt("Enter a positive number: "));
+    // const num8 = parseInt(prompt("Enter a positive number: "));
     // let isPrime = true;
 
     // // check if number is equal to 1
-    // if (num1 === 1) {
+    // if (num8 === 1) {
     //   console.log("1 is neither prime nor composite number.");
     // }
 
 
-    // else if (num1 > 1) {
+    // else if (num8 > 1) {
 
 
-    //   for (let i = 2; i < num1; i++) {
-    //     if (num1 % i == 0) {
+    //   for (let i = 2; i < num8; i++) {
+    //     if (num8 % i == 0) {
     //       isPrime = false;
     //       break;
     //     }
-    //   } 56
+    //   } 
 
     //   if (isPrime) {
-    //     console.log(`${num1} is a prime number`);
+    //     console.log(num8, "is a prime number");
     //   } else {
-    //     console.log(`${num1} is a not prime number`);
+    //     console.log(`${num8} is a not prime number`);
     //   }
     // }
 
 
-    // else {
-    //   console.log("The num1 is not a prime number.");
-    // }
+  
   </script>
 
 
@@ -704,6 +707,8 @@ Output: 7 present 2 times.  -->
        getName }
     obj2.getName()
 
+
+    
 
     function sayHi(msg) {
       return console.log(this.name + "is" + msg)

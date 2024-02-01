@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- FIND EVEN&ODD AND SUM OF EVEN AND ODD -->
+    <script>
+        const num = [1, 2, 3, 4, 5, 6, 7, 8]
+        const even = num.filter((item) => {
+            return item % 2 === 0
+        })
+        console.log(even)
+        const sum = even.reduce((acc, curr) => {
+            return acc + curr;
+        }, 0)
+        console.log(sum)
+
+
+
+
+
+        const odd = num.filter((item) => {
+            return item % 2 == !0
+        })
+        console.log(odd)
+        const summ = odd.reduce((acc, curr) => {
+            return acc + curr;
+        }, 0)
+        console.log(summ)
+    </script>
+
+    <!-- FACTORIAL OF A NUMBER -->
+    <script>
+    
+
+        function factorialIterative(num) {
+            let factorial = 1;
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+        const numbe = 5;
+        const factorial = factorialIterative(numbe);
+        console.log("THE FACTORIAL OF 5 IS", factorial);
+
+
+        function factorialRecursive(num) {
+            if (num === 0 || num === 1) {
+                return 1;
+            } else {
+                return num * (num - 1);
+            }
+        }
+
+        const numb = 5;
+        const factoriall = factorialRecursive(numb);
+        console.log("THE FACTORIAL OF 5 IS", factoriall);
+    </script>
+    <!-- VOWELS -->
+    <script>
+        const str = "Hello, how are you?";
+        const vowels = str.match(/[aeiou]/gi);
+        console.log(vowels);
+
+        function extractVowelsRegex(str) {
+            const vowels = str.match(/[aeiou]/gi);
+            return vowels ? vowels.join("") : "";
+        }
+
+        const inputString = "Helloiou World";
+        const extractedVowels = extractVowelsRegex(inputString);
+        console.log(extractedVowels);
+
+        // function findGCD(a, b) {
+        //     while (b !== 0) {
+        //         const temp = b;
+        //         b = a % b;
+        //         a = temp;
+        //     }
+        //     return a;
+        // }
+
+        // function findLCM(a, b) {
+        //     const gcd = findGCD(a, b);
+        //     const lcm = (a * b) / gcd;
+        //     return lcm;
+        // }
+
+        // const num1 = 6;
+        // const num2 = 8;
+        // const lcm = findLCM(num1, num2);
+        // console.log(lcm);
+ 
+        function findGCD(a, b) {
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+function findLCM(numberss) {
+  let lcm = numberss[0];
+  for (let i = 1; i < numberss.length; i++) {
+    const gcd = findGCD(lcm, numberss[i]);
+    lcm = (lcm * numberss[i]) / gcd;
+  }
+  return lcm;
+}
+
+const numberss = [6, 8, 12, 18];
+const lcm = findLCM(numberss);
+console.log(lcm);
+
+
+
+// function gcdOfThreeNumbers(a, b, c) {
+  function gcd(a, b) {
+    return b === 0 ? a : gcd(b, a % b);
+//   }
+//   return gcd(gcd(a, b), c);
+}
+const number1 = 55;
+const number2 = 5;
+// const number3 = 5555;
+const gcds = gcd(number1, number2);
+console.log("GCD:", gcds);
+
+
+    </script>
+</body>
+
+</html>
