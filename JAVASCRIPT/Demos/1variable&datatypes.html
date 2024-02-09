@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables</h1>
+    <script>
+        var a,b,c;
+        a=10;
+        b=20;
+        c=30;
+        result=a+b+c;
+        document.write("sum of a,b,c=",  result)
+    </script>
+    <br>
+    <script>
+        function add(){
+        var a,b,c;
+        a=10;b=20;c=30;
+        result=a+b+c;
+        document.write(result)
+        }
+        // add()
+    </script>
+    <button type="button" onclick="add()">Add</button>
+
+  <h1>Data types</h1>
+  <script>
+    var i,j,k,marks,student;
+    i=10;
+    j=2.3;
+    k="sandeeep"
+    l=true;
+    marks=[25,30,45,90];
+    student={name:"nani"};
+    document.write("datatyoe of i is ",typeof i)
+    
+    document.write("<br>datatyoe of j is ",typeof j)
+
+    document.write("<br>datatyoe of k is ",typeof k)
+    document.write("<br>datatyoe of l is ",typeof l)
+    document.write("<br>datatyoe of marks is ",typeof marks)
+    document.write("<br>",typeof student)
+    document.write("<br>",student.name)
+    document.write("<br>",marks[0])
+
+    var e,f;
+    e="your's"
+    f='hello "nani"'
+    document.write("<br>",e)
+    document.write("<br>",f)
+  </script>
+
+</body>
+</html>

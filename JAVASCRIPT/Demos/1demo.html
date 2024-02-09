@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text{color: aqua;}
+    </style>
+    
+</head>
+<body> 
+    
+                 <!-- TO CHANGE THE CONTENT -->
+
+    <h1>Change the html contet</h1>
+    <h2 id="content">hello guest</h2>
+    <button type="button" onclick='document.getElementById("content").innerHTML="hello shekar"'>shekar</button>
+    <button type="button" onclick='document.getElementById("content").innerHTML="hello sairam"'>sairam</button>
+    <button type="button" onclick='document.getElementById("content").innerHTML="hello harish"'>harish</button>
+
+
+                   <!-- TO CHNGE THE COLOUR -->
+
+    <h1>Change the css contet</h1>
+    <h2 id="text">hello guest</h2>
+    <button type="button" onclick='document.getElementById("text").style.color="red"'>shekar</button>
+    <button type="button" onclick='document.getElementById("text").style.color="blue"'>sairam</button>
+    <button type="button" onclick='document.getElementById("text").style.color="black"'>harish</button>
+
+
+                    <!-- TO CHANGE THE CONTENT USING SCRIPT -->
+    <script>
+        function display(){
+            document.getElementById("display").innerHTML="hello world"
+        }
+        
+    </script>
+    <br>
+    <script>
+         document.write("i love my india")
+        //  window.alert('i love my india')
+        console.log('i love my india')
+    </script>
+
+    <h1 id="display">change the content </h1>
+    <button type="button" onclick="display()">click me</button>
+
+
+</body>
+</html>
