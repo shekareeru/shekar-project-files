@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>STRINGS</h3>
+    <script>
+        var s1="welcome to 'stings'"
+        var s2='welcome to "india"'
+        document.writeln(s1,"<br>")
+        document.writeln(s2,"<br>")
+        document.writeln(typeof s1,"<br>")
+        document.writeln(typeof s2,"<br> <br>")
+
+
+        var s3= new String("this is string obj")
+        document.writeln(s3,"<br>")
+        document.writeln(typeof s3,"<br>")
+           
+        document.writeln("<h3>STRING METHODS</h3>","<br>")
+        document.writeln("index of o=",s2.indexOf("o"),"<br>")
+        document.writeln("lastindex of o=",s2.lastIndexOf("o"),"<br>")
+        document.writeln(s2.search("o"),"<br>")
+        document.writeln(s2.slice(0,4),"<br>")
+         
+        document.writeln(s2.slice(-14,-3),"<br>")
+        document.writeln(s2.substring(0,4),"<br>")
+        document.writeln(s2.substr(0,4),"<br>")
+        document.writeln(s2.split("o"),"<br>")
+        document.writeln(s2.replace("india","IND"),"<br>")
+        document.writeln(s2.toUpperCase(),"<br>")
+        document.writeln(s2.toLocaleLowerCase(),"<br>")
+        document.writeln(s2.concat(s3),"<br>")
+        document.writeln(s2.length,"<br>")
+        document.writeln(s1.charAt(6),"<br>")
+        document.writeln(s2.charCodeAt(0),"<br>") 
+
+        for(i=0;i<s2.length;i++){
+            document.writeln(s2[i]);
+        }
+
+    </script>
+</body>
+</html>

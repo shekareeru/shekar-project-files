@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <h3>ITERATIVE STATEMENTS</h3>
     <h3 id="res"></h3>
     <script>
@@ -19,6 +20,48 @@
         
         }
         document.getElementById("res").innerHTML=res;
+    </script> 
+
+    <h3>NUMBERS OBJECTS</h3>
+    <script>
+        var n=4.654;
+        var x=15;
+        var y=new Number(15);
+        var z=new Number(15);
+
+        var s=x.toString();
+        var e=x.toExponential(3);
+        var f=n.toFixed(5);
+        var p=n.toPrecision(3);
+        
+        document.writeln(typeof x +"<br>")
+        document.writeln(typeof y +"<br>")
+        document.writeln(typeof s +"<br>")
+        document.writeln(typeof e +"<br>")
+        document.writeln(typeof f +"<br>"),
+        document.writeln(typeof p +"<br> <br>")
+
+        document.writeln(x==y,"<br>")
+        document.writeln(x===y,"<br>")
+        document.writeln(y===z,"<br> <br>")
+
+        document.writeln(e+"<br>")
+        document.writeln(f +"<br>")
+        document.writeln(p+"<br> <br>")
+
+        var b=parseInt(f) 
+        var a=parseFloat(f)
+
+        document.writeln(b,"<br>")
+        document.writeln(a,"<br>")
+        document.writeln(typeof a,"<br>")
+        document.writeln(typeof b,"<br> <br>")
+
+        document.writeln(Number.MAX_VALUE,"<br>")
+        document.writeln(Number.MIN_VALUE,"<br>")
+        document.writeln(Number.POSITIVE_INFINITY,"<br>")
+        document.writeln(Number.NEGATIVE_INFINITY,"<br>")
+        document.writeln(Number.MAX_SAFE_INTEGER)
     </script>
 </body>
 </html>
