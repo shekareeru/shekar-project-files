@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+// default export  and destructiing export components
+import Mainclasscomp, { Childclasscomp, Siblingclasscomp } from './COMPONENTS/MultipleClasscomp';
+import Siblingfunction, { Childfunction, Mainfunction } from './COMPONENTS/MultipleFuncomp';
+import MainFunction from './COMPONENTS/NestedFun';
+
+// import MainComp from './COMPONENTS/MainCompo';
+// import ABC from './COMPONENTS/MultipleComp';  
+// import FuncCompo from './COMPONENTS/FuncCompo';
+// import ClassComp from './COMPONENTS/ClassComp';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <MainComp/> */}
+     {/* <FuncCompo/> */}
+     {/* <ClassComp/> */}
+     {/* <ABC/> */}
+     {/* <MainComp/> */}
+     <Mainclasscomp/>
+     <Childclasscomp/>
+     <Siblingclasscomp/>
+     <Siblingfunction/>
+     <Childfunction/>
+     <Mainfunction/>
+     <MainFunction/>
     </div>
   );
 }

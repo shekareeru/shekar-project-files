@@ -5,6 +5,7 @@ export default class Form1 extends Component{
         super();
         this.state = {
           address: {
+            
             street: "",
             colony: "",
             city: "",
