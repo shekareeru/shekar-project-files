@@ -1,3 +1,6 @@
+
+// default export and destructing export in components
+
 export function Mainfunction(){
     return <h3>maain fun</h3>
 }
