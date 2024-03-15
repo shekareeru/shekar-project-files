@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-function Timer() {
-  const [count, setCount] = useState(0);
+const numbers =[1,2,3,4,5]
+const listItems = numbers.map((number)=>(
+<li key={number}>{number}</li>
+));
 
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-  });
-
-  return <h1>I have rendered {count} times!</h1>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Timer />);
+ReactDOM.render(
+    <ul>{listItems}</ul>,
+    document.getElementById('root')
+);
