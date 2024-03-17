@@ -14,15 +14,15 @@ export default class Form1 extends Component{
             country: "",
           },
           allAddress: [
-            {
-                street:"ashoknagr1",
-                colony:"no1",
-                city:"karimanagar1",
-                state:"ts",
-                zipcode:"55900",
-                country:"India1"
+            // {
+            //     street:"ashoknagr1",
+            //     colony:"no1",
+            //     city:"karimanagar1",
+            //     state:"ts",
+            //     zipcode:"55900",
+            //     country:"India1"
     
-            },
+            // },
             {
                 street:"vidyanagar",
                 colony:"no2",
