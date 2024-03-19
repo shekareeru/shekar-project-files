@@ -1,4 +1,9 @@
 
+// A Higher Order Component is a pattern used for
+//  reusing component logic. 
+// It is a function that takes a component 
+// and returns a new component with additional functionality.
+
 
 import React from 'react'
 
