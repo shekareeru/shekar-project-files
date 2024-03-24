@@ -1,0 +1,15 @@
+.marquee {
+  width: "120%";
+  direction: "right";
+  height: "60px";
+  background-color: black;
+  padding-top: 8px;
+  color:white;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-left: 30px;
+  background-color: orangered;
+  width: 200px;
+}

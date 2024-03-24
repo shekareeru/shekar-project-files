@@ -140,10 +140,16 @@ const LoginSignup = () => {
         },
       }}
     >
+      {/* <Box sx={{my: 3,"& svg": {  fontSize: "60px",  cursor: "pointer",  mr: 2, },
+        "& svg:hover": {
+         color: "blue",
+         transform: "translateX(5px)",
+         transition: "all 400ms",},}}> */}
       <FacebookIcon />
       <InstagramIcon />
       <TwitterIcon />
       <YouTubeIcon />
+      {/* </Box> */}
     </Box>
    
   </div>

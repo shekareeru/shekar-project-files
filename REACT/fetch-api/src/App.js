@@ -1,12 +1,12 @@
 // // FETCH-API
 import React,{useEffect} from "react"
-import './App.css';
+// import './App.css';
 
-function App() {
+function App(){
   useEffect(()=>{
     fetch("https://jsonplaceholder.typicode.com/todos")
-    // .then(respone=>respone.json())
-    .then(response=>console.log(response.json))
+    .then(response=>response.json())
+    .then(json=>console.log(json))
   },[])
   return (
     <div className="App">
