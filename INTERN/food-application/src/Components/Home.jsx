@@ -1,78 +1,148 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "../Style.css/Items.css"
+// import {Routes,Route,Outlet,Link,BrowserRouter} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const LogInSignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showFields, setShowFields] = useState(false);
-  const [isLoginMode, setIsLoginMode] = useState(false);
-  const [error, setError] = useState('');
-  
-  const navigate = useNavigate(); // Move useNavigate outside of handleSubmit
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleLoginClick = () => {
-    setShowFields(true);
-    setIsLoginMode(true);
-  };
-
-  const handleSignupClick = () => {
-    setShowFields(true);
-    setIsLoginMode(false);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    if (!email || !password) {
-      setError('Please enter your email and password.');
-      return;
-    }
-
-    // Perform login or signup logic here
-
-    // Navigate to home page after successful login/signup
-    navigate('/');
-  };
-
+const Home = () => {
   return (
-    <div className="container">
-      <h1>WELCOME TO PIZZA HUT</h1>
-      {!showFields && (
-        <div className="buttons-container">
-          <button type="button" onClick={handleLoginClick} className="login-button">
-            Login
-          </button>
-          <button type="button" onClick={handleSignupClick} className="signup-button">
-            Signup
-          </button>
+    <div>
+      
+      <div
+        id="carouselExampleInterval"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active" data-bs-interval="10000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/Slide4_1604775313.jpeg"
+              className="d-block w-100"
+              alt="pic1"
+            />
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/Slide3_1604775297.jpeg"
+              className="d-block w-100"
+              alt="pic2"
+            />
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/Slide1_1604775904.jpeg"
+              className="d-block w-100"
+              alt="pic2"
+            />
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/CCC85C94-E1F6-476B-B21C-8594644B29C2_1672575954.jpeg"
+              className="d-block w-100"
+              alt="pic2"
+            />
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/A68B387A-1AD6-4AAD-A242-5608485F7B5A_1613742410.jpeg"
+              className="d-block w-100"
+              alt="pic2"
+            />
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/Slide1_1604775904.jpeg"
+              className="d-block w-100"
+              alt="pic2"
+            />
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://www.fiahomefoods.com/uploads/banners/Slide5_1604775325.jpeg"
+              className="d-block w-100"
+              alt="pic2"
+            />
+          </div>
         </div>
-      )}
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
 
-      {showFields && (
-        <form onSubmit={handleSubmit} className="form-container">
-          <label>
-            Email:
-            <input type="email" value={email} onChange={handleEmailChange} className="input-field" />
-          </label>
-          <label>
-            Password:
-            <input type="password" value={password} onChange={handlePasswordChange} className="input-field" />
-          </label>
-         
-          <button type="submit" className="action-button">{isLoginMode ? 'Login' : 'Signup'}</button>
-          {error && <p className="error-message">{error}</p>}
-        </form>
-      )}
+      <div className="buttons">
+        <Link to="/Sweets" className="button2 btn btn-dark">
+          SWEETS
+        </Link>
+        <Link to="/LoveBites" className="button2 btn btn-dark">
+          LOVEBITES
+        </Link>
+        <Link to="/Snacks" className="button2 btn btn-dark">
+          SNACKS
+        </Link>
+        <Link to="/Masala&Podi's" className="button2 btn btn-dark">
+          MASALA'S&PODI'S
+        </Link>
+        <Link to="/Veg-Pickles" className="button2 btn btn-dark">
+          VEG PICKLES
+        </Link>
+        <Link to="/Non-Veg-Pickles" className="button2 btn btn-dark">
+          NON VEG PICKLES
+        </Link>
+        <Link to="/Fryums" className="button2 btn btn-dark">
+          FRYUMS
+        </Link>
+        <Link to="/Specials" className="button2 btn btn-dark">
+          SPECIALS
+        </Link>
+      </div>
+      <div>
+        <div>
+          <aside>
+            <h2>FROM OUR HOMES TO YOURS!</h2>
+            <p>
+              It all started with the passion for food and a simple idea. Within
+              each individual home is a unique tradition and way of cooking,
+              using age-old ingredients and recipes passed down to generations
+              with love and care. We gathered a team of inspirational women to
+              share and create their own recipes to bring back those nostalgic
+              flavours to you.
+            </p>
+          </aside>
+        </div>
+        <div>
+          <aside>
+            <p>
+              It all started with the passion for food and a simple idea. Within
+              each individual home is a unique tradition and way of cooking,
+              using age-old ingredients and recipes passed down to generations
+              with love and care. We gathered a team of inspirational women to
+              share and create their own recipes to bring back those nostalgic
+              flavours to you.
+            </p>
+          </aside>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default LogInSignUp;
+export default Home;
