@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const f = new Boolean(false);
+        if (f){
+           console.log(1);
+        }else{
+            console.log(2)
+        }
+           console.log(typeof f)
+    </script>
+
+    <script>
+        let x=100;
+        let y=x++;                  // increment 101
+        let z=++x;                  // increment 102   
+        let n = (x==y)? z++ : ++z;       //  x is not equal to y then z++ is 103                
+        console.log(n)
+    
+    </script>
+
+    <script>
+        const obj = {x:1, y:2};
+        let {x:a, y:b} =obj;       // Destructuring obj.x into a and obj.y into b
+        a=2;
+        console.log(obj.x, obj.y)        // Changing the value of a to 2 doesn't affect the value of
+                                        //  obj.x because a is just a variable holding the value of obj.
+                                       // x at the moment of destructuring. Changing a afterward won't 
+                                      // affect the original object obj
+       
+    </script>
+    <script>
+        let elf = 'SaiRam';     //    Reference error elf before initialization
+        function lapland(parms){
+            console.log(elf)
+            let elf = 'Shekar'
+        }
+        lapland();
+    </script>
+    <script>
+        const obje ={};
+        obje.value = undefined;
+        console.log(Object.hasOwn(obje,'value'));     // Object.hasOwn() is a method that checks if an object has a property with the specified name
+        // f the property is found directly on the object,it returns true; otherwise, it returns false.
+    </script>
+    <script>
+        console.log("9">"19")  // TRUE  compare the charecters at same position compare 9 and 1 by using lxicographical order(UNICODE BASE) 9 comes after 1           
+        console.log("09">"19")  // FALSE but here 1 comes after 0 
+    </script>
+    <script>
+        console.log(1+2+'1')
+        console.log('1'+1+2)
+    </script>
+    <script>
+        let fo = function(){
+            console.log(1);
+        }
+        setTimeout(fo,1000);
+        fo=function(){
+            console.log(2);
+        }
+    </script>
+
+</body>
+</html>
