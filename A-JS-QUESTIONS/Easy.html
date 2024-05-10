@@ -9,56 +9,32 @@
 </head>
 
 <body>
-  <script>
-    var str= "hello";
-    var op = str.split('').reverse().join('')
-    console.log(op)
-
-
-    // BUILT-IN FUNCTION
-    // function reverseString(str){
-    //   return str.split("").reverse().join("")
-    // }
-    // console.log(reverseString("hello"))
-
-    function reverseString(str){
-      var newString ="";
-      for (var i=str.length-1;i>=0;i--){
-        newString+=str[i];
-      }
-      return newString;
-    }
-    console.log(reverseString("hello"))
-  </script>
+ 
   <script>
     //Q.No1:create a function that takes two numbers as arguments and returns their sum. 
     function addition(a, b) {
        sum = a + b;
       console.log(sum)
-      // return sum;
-
     }
     addition(5, 10)
-           
 
-
-    function addNumbers() {
-  var numbers = [3,3,3];
-  var sum = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  return sum;
-}
-var result = addNumbers();
-console.log(result);
-
-
+    function addNum(a1, a2){
+      let sum =0;
+      for(let i=0; i<a2; i++){
+        sum++;
+      }
+      for (let i = 0; i <a1; i++) {
+        sum++;
+    }
+    return sum;
+    }
+    let rsult = addNum(3, 5);
+    console.log("The sum is:", rsult);
 
 
   </script>
 
-  <script>
+  <!-- <script>
     // Q.No2: write a function that takes an integer minutes and converts it to seconds.
    
     function convertminutes() {
@@ -112,16 +88,16 @@ console.log(result);
     }
     Power(4,5)
   </script>
-  <!-- 6.Write a function that returns the string "something" joined with a space " "  and the given argument a. -->
-  <script> 
+   6.Write a function that returns the string "something" joined with a space " "  and the given argument a. -->
+  <!-- <script> 
     function somethingString(a) {
       console.log("something", " ", a)
     }
     somethingString("string")
   </script>
 
-  <!-- 7:	Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.  -->
-  <script>
+   7:	Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.  -->
+  <!-- <script>
     function Num(a, b) {
       if (a == 10 || b == 10 || a + b == 10) {
         return console.log(true)
@@ -131,10 +107,10 @@ console.log(result);
       }
     }
     Num(5, 5)
-  </script>
+  </script>  -->
 
   <!-- 8.	Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string. -->
-  <script>
+  <!-- <script>
     function Strings(firststring, secondstring) {
       if (firststring.length == secondstring.length) {
         console.log(true)
@@ -144,17 +120,17 @@ console.log(result);
       }
     }
     Strings("12354", "bujj")
-  </script>
+  </script> -->
 
   <!-- 9.	Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function. -->
-  <script>
+  <!-- <script>
     var Greeting = (name) => {
       console.log("HAPPY BIRTHDAY TO YOU", name, "!!!")
     }
     Greeting("SHEKAR")
-  </script>
+  </script> -->
   <!-- 10.	Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555). -->
-  <script>
+  <!-- <script>
     function Phonenumber(num) {
       var first = "";
       var second = "";
@@ -172,12 +148,12 @@ console.log(result);
       console.log("(", first, ") ", second, "-", third)
     }
     Phonenumber([7, 6, 6, 1, 0, 4, 1, 0, 4, 9])
-  </script>
+  </script> -->
   <!-- 11.	Create a function that returns an array of strings sorted by length in ascending order 
  Example:
 sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
  -->
-  <script>
+  <!-- <script>
     function asendingorder(numbers) {
       var data = [3, 7, 8, 6, 1, 2, 4, 90, 9, 5]
       var storage = ["aaa", "bb", "cccc", "ghyygffg", "e", "y", "h"]
@@ -186,13 +162,13 @@ sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
     
     }
     asendingorder()
-  </script>
+  </script> -->
   <!-- 12.	Create a function that takes an array of arrays with numbers.Return a new (single) array with the largest numbers of each.
   Example:
 findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
 
  -->
-  <script>
+  <!-- <script>
     function Largestnumber(arr) {
       var Num = [1,2,3,4];
       for (var i = 0; i < arr.length; i++) {
@@ -204,9 +180,9 @@ findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
       }
       console.log(Num)
     }
-    Largestnumber([[1, 2, 3, 4], [58, 6, 7, 8], [9, 100, 11, 12], [103, 14, 15, 16]]);
+    Largestnumber([[1, 2, 3, 4], [58, 6, 7, 8], [9, 100, 11, 12], [103, 14, 15, 16]]); -->
     // ********************************************************************************************************************************
-    function number() {
+    <!-- function number() {
       var Array = [[1, 2, 3, 4], [44, 55, 66, 77], [4, 0, 8, 6]];
       var largestnumber = [];
       Array.forEach((element) => {
@@ -222,11 +198,11 @@ findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
       console.log(largestnumber)
     }
     number()
-  </script>
+  </script> -->
 
 
 <!-- SPACE BETWEEN ARRAY  -->
-<script>
+<!-- <script>
 
 let Str="shekar";
     let Arr = Str.split("").join(" ")
@@ -237,7 +213,7 @@ let Str="shekar";
   console.log(mystring)
 </script>
 
-  <script>
+  <script> 
     // 13:Create a function that takes an array of numbers and returns the second largest number
     //     Example:
     // secondLargest([10, 40, 30, 20, 50]) ➞ 40
@@ -252,7 +228,7 @@ let Str="shekar";
     }
 
     SecondLargestNumber();
-  </script>
+  </script> -->
 
   <!-- Q14.	Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates). 
   Example:
@@ -261,7 +237,7 @@ removeDups([1, 0, 1, 0]) ➞ [1, 0]
 
 removeDups(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
 -->
-  <script>
+  <!-- <script>
     function removeDuplicates(arry) {
       var newdata = []
       arry.forEach((data) => {
@@ -278,8 +254,8 @@ removeDups(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
       console.log(newdata);
     }
     removeDuplicates([1, 0, 0, 1, 7, 9, 0, 7, 9])
-    removeDuplicates(["nani", "rider", "56", "rider", "nani", "56"]);
-  </script>
+    removeDuplicates(["nani", "rider", "56", "rider", "nani", "56"]); -->
+  <!-- </script> -->
 
 
   <!-- 15.	Create a function that takes an array of integers as an argument and returns a unique number from that array. All numbers except unique ones have the same number of occurrences in the array 
@@ -289,7 +265,7 @@ findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
 
 -->
 
-  <script>
+  <!-- <script>
     function uniqueNumbers(arry) {
       let num = arry.reduce((a, b) => {
         if (a == b) {
@@ -304,13 +280,13 @@ findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
     uniqueNumbers([2, 2, 2, 3, 4, 4, 4])
     var a = [1, 1, 2, 4, 5, 5, 6, 78, 9]
     console.log([...new Set(a)])
-  </script>
+  </script> -->
 
   <!-- 16.Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
  Example:
  
  charCount("c", "Chamber of secrets") ➞ 1 -->
-  <script>
+  <!-- <script>
     function myfunction(string1, string2) {
       let a = 0;
       for (let i = 0; i < string2.length; i++) {
@@ -323,13 +299,13 @@ findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
 
     }
     console.log(myfunction("c", "Chamber of secrets"));
-  </script>
+  </script> -->
   <!-- 17.Create a function that takes a string and returns the number (count) of vowels contained within it.
   Example:
   
   countVowels("Celebration") ➞ 5
    -->
-  <script>
+  <!-- <script>
     const Myfunction = (str) => {
       return str.replace(/[^aeiou]/gmi, "").length
 
@@ -349,19 +325,19 @@ findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
   }
 
   return vowelCount;
-}
+} 
 
 // Example usage
 console.log(countVowels('hEllOOo worlUd')); // Output: 3
 console.log(countVowels('JavaScrIIpt is awesme'));
-  </script>
+  </script> -->
 
 
-  <script>
+  
     // 18.	Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
     //   Example:
     // reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
-
+    <!-- <script>
     function reverseCase(str) {
       var str2 = '';
       for (var i = 0; i < str.length; i++) {
@@ -375,7 +351,7 @@ console.log(countVowels('JavaScrIIpt is awesme'));
       console.log(str2);
     }
     reverseCase("haPPyy AAAppph")
-  </script>
+  </script> -->
   <!-- 19. Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer.
 			
 Input:      n=5
@@ -384,7 +360,7 @@ Output:   2 4 6 8 10
 Explanation:  Loop start with 1 go till 5 bcoz n=5
 1 x 2 =2, 2 x 2=4, 3 x 2=6 …..etc 
  -->
-  <script>
+  <!-- <script>
 function multiplyByTwo(num) {
   return num * 2;
 }
@@ -397,7 +373,7 @@ function multiplyByTwoLoop(n) {
 
 multiplyByTwoLoop(5); // Output: 2 4 6 8 10
 
-  </script>
+  </script> -->
 
   <!-- 20. Create Function that will take one parameter and return type of the data.
 			
@@ -406,7 +382,7 @@ Output:     Integer
 
 Input:       Coding
 Output:    String -->
-  <script>
+  <!-- <script>
     function params(data) {
       return data
     }
@@ -415,9 +391,9 @@ Output:    String -->
   </script>
 
 
-  <script>
+  <script> -->
     //Q.No:21.Program to find greatest of three numbers(using ternery operator)
-    let num1 = 500;
+    <!-- let num1 = 500;
     let num2 = 4004;
     let num3 = 300;
     let largest;
@@ -431,7 +407,7 @@ Output:    String -->
       largest = num3;
     }
     console.log("the largest number is :" , largest);
-  </script>
+  </script> -->
 
   <!-- 22.C Program to find factorial of number.
 		
@@ -439,7 +415,7 @@ Output:    String -->
   Output: 120
 
   Explanation: 5 x 4 x 3 x 2 x 1 = 120 -->
-  <script>
+  <!-- <script>
     var number = 5
     var factorial = number;
 
@@ -449,14 +425,14 @@ Output:    String -->
     }
     console.log(factorial);
 
-  </script>
+  </script> -->
 
-  <script>
+  <!-- <script> -->
     //Q.No:23,Write JS program to arrahge numbers in ascending order.
     // Input: [2,3,1,5,4]
     // 	Output: [1,2,3,4,5]
 
-    let array = [2, 3, 1, 5, 4];
+    <!-- let array = [2, 3, 1, 5, 4];
     let n = array.length;
     for (i = 0; i < n; i++) {
       for (j = i + 1; j < n; j++) {
@@ -468,7 +444,7 @@ Output:    String -->
       }
     }
     console.log(array);
-  </script>
+  </script> -->
 
   <script>
     // Q.No24:Print pattern using loop(1 to 5)
@@ -717,7 +693,27 @@ Output: 7 present 2 times.  -->
     sayHi.apply(per, ["boy"])
   </script>
 
+<script>
+  var str= "hello";
+  var op = str.split('').reverse().join('')
+  console.log(op)
 
+
+  // BUILT-IN FUNCTION
+  // function reverseString(str){
+  //   return str.split("").reverse().join("")
+  // }
+  // console.log(reverseString("hello"))
+
+  function reverseString(str){
+    var newString ="";
+    for (var i=str.length-1;i>=0;i--){
+      newString+=str[i];
+    }
+    return newString;
+  }
+  console.log(reverseString("hello"))
+</script> 
 </body>
 
 </html>
